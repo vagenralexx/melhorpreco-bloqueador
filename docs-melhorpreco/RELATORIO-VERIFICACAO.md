@@ -82,8 +82,8 @@ Cada modo foi aplicado **pelo botão do painel**, e depois rodou a navegação e
 
 - Redesenhadas só com CSS e dados, sem mudar a lógica da uBOL. Configurações: cada seção num cartão; modos de filtragem com destaque azul no escolhido (empilham abaixo de 640 px); comportamentos como linhas com título e explicação; botões de backup no padrão novo. Listas: total de regras em faixa de destaque, busca maior, cada grupo num cartão com a contagem em pílula, linhas com hover, e as listas ligadas em negrito.
 - 14 nomes de listas traduzidos, mantendo o nome próprio (ex.: "Peter Lowe – Anúncios, rastreadores e mais", "EasyList/uBO – Avisos de cookies").
-- **Bug achado e corrigido:** as listas de apostas e adulto não apareciam na aba de listas (só o modo Família as ligava). Na uBOL, o grupo "Outras" reúne as listas *sem* grupo, e eu tinha posto . Agora aparecem em "Outras" e a busca por "apostas" as encontra. O modo Família continua reconhecido e bloqueando (bet365, Blaze, sites adultos).
-- Conferido em 1280, 1024 e 600 px, claro e escuro, sem nada passando da área visível e sem erro no console. Interação testada: trocar o modo de filtragem e voltar, ligar e desligar uma opção, buscar listas. Capturas em .
+- **Bug achado e corrigido:** as listas de apostas e adulto não apareciam na aba de listas (só o modo Família as ligava). Na uBOL, o grupo "Outras" reúne as listas *sem* grupo, e eu tinha posto `"group": "misc"`. Agora aparecem em "Outras" e a busca por "apostas" as encontra. O modo Família continua reconhecido e bloqueando (bet365, Blaze, sites adultos).
+- Conferido em 1280, 1024 e 600 px, claro e escuro, sem nada passando da área visível e sem erro no console. Interação testada: trocar o modo de filtragem e voltar, ligar e desligar uma opção, buscar listas. Capturas em `verificacao/redesenho2/`.
 
 ## Sem prova
 - ~~Botão "Ativar estatísticas" no Chrome normal~~: confirmado pelo dono (seção 8).
