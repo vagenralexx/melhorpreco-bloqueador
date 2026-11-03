@@ -47,7 +47,30 @@ Detalhes:
 - Painel (Configurações, Listas de filtros, Sobre) conferido em 1024x768, claro e escuro, sem rolagem horizontal. Nome "Melhor Preço Bloqueador", ícone novo, aviso de fork e créditos do Raymond Hill na aba Sobre.
 - Corrigido durante a conferência: a frase do fork na aba Sobre quebrava em colunas (faltava um `<span>`). Também tirei a bandeira 🇧🇷 do nome da lista do Procon, porque o Windows a mostra como "BR" na página de aviso.
 
+## 6. Modos de proteção (build 2026.1103.1612)
+
+Cada modo foi aplicado **pelo botão do painel**, e depois rodou a navegação em 12 sites (a lista anterior com KaBuM! e Zoom no lugar de Magalu e Shopee), a 1024x768. Capturas em `verificacao/presets/`.
+
+| Modo | Aplicação | Regras | Resultado nos 12 sites |
+|---|---|---|---|
+| Leve | estado inicial, reconhecido como "Leve" | 20.289 | igual à seção 3 |
+| Recomendado | 2,9 s | 20.293 | nenhuma quebra; bloqueios quase iguais ao Leve (nesses sites grandes a EasyPrivacy já pega quase tudo) |
+| Máximo | 3,5 s | 26.039 | nenhuma quebra; Terra caiu de 210 para 87 requisições; some o aviso de cookies |
+| Família | — | 20.294 | bet365 e Blaze → aviso "HaGeZi Gambling"; dois sites adultos → aviso "OISD NSFW"; loja do Procon → aviso do Procon; g1 e Google abrem normalmente |
+
+- **KaBuM!:** com a extensão (já no modo Leve) aparecem 143 preços na home, contra 204 sem ela, nas duas repetições na mesma largura. Somem "Recomendados para você" (2x) e "Produtos em oferta", que vêm da Insider (`kabum.api.useinsider.com`), além do aviso de cookies. Quem bloqueia é a EasyPrivacy/uBlock filters (listas originais), não as listas novas. Mesmo caso da Americanas.
+- **Zoom (comparador de preços):** 50 preços na listagem de celulares com e sem a extensão. O domínio `s.zst.com.br` aparece entre os mais bloqueados, mas a página não perde conteúdo.
+- Bugs achados e corrigidos durante o teste: (1) os botões dos modos não respondiam ao clique no texto, porque o `dom.on` da uBOL só dispara quando o alvo é o próprio botão; (2) o modo Leve nunca era reconhecido, porque a `bra-0` está no grupo de regiões; (3) com a aba nova, "Sobre" quebrava para uma segunda linha; (4) o quarto cartão de número ficava sozinho na linha.
+
+## 7. Estatísticas
+
+- Testadas numa cópia do build com a permissão `webRequest` já concedida (`dist/build/test-stats`), porque a automação não consegue clicar no pedido de permissão do Chrome.
+- Depois dos 12 sites, o painel mostrou 492 requisições bloqueadas, contra 464 contadas pela automação (a diferença são requisições de quadros internos que a automação não vê). Mostrou também 98 domínios, 16 sites e a distribuição por tipo (Requisição de dados 270, Script 109, Imagem 92…).
+- Páginas barradas com aviso são contadas à parte (o teste do modo Família gera essas entradas).
+- Telas conferidas: claro e escuro a 1024x768 (gráfico com dica ao passar o mouse e ao focar pelo teclado, tabela opcional, rankings) e 600 px de largura (medido: nenhum elemento passa da área visível).
+
 ## Sem prova
+- **Botão "Ativar estatísticas" no Chrome normal:** o pedido de permissão precisa ser aceito à mão. O código pede `webRequest` com `chrome.permissions.request`; testado só com a permissão já concedida.
 
 - **Popup aberto pelo ícone da barra:** a automação não clica no ícone de extensão. O popup aberto como aba não tem site associado e não representa o uso real. A mudança nele é só o nome (vem das traduções).
 - **Ícone na barra do Chrome** (16/32 px): gerado, mas não visto na barra.

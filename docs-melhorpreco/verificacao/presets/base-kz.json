@@ -1,0 +1,53 @@
+{
+ "extInfo": {},
+ "results": [
+  {
+   "url": "https://www.kabum.com.br/",
+   "requests": 689,
+   "blocked": 0,
+   "failedOther": 22,
+   "blockedHosts": {},
+   "consoleErrors": 2,
+   "status": 200,
+   "loadMs": 9678,
+   "title": "KaBuM! | Ofertas em Tech e Gamer? Só se for no KaBuM!",
+   "textLen": 19458,
+   "prices": 204,
+   "links": 291,
+   "imgsVisible": 98,
+   "iframes": 14
+  },
+  {
+   "url": "https://www.zoom.com.br/",
+   "requests": 528,
+   "blocked": 0,
+   "failedOther": 39,
+   "blockedHosts": {},
+   "consoleErrors": 3,
+   "status": 200,
+   "loadMs": 10481,
+   "title": "Compare preços, economize com cupons e cashback exclusivos | Zoom",
+   "textLen": 8024,
+   "prices": 39,
+   "links": 659,
+   "imgsVisible": 76,
+   "iframes": 19
+  },
+  {
+   "url": "https://www.zoom.com.br/celular",
+   "requests": 410,
+   "blocked": 0,
+   "failedOther": 36,
+   "blockedHosts": {},
+   "consoleErrors": 3,
+   "status": 200,
+   "loadMs": 9718,
+   "title": "Celular em promoção no Zoom: iPhone, Samsung, Xioami e mais!",
+   "textLen": 8592,
+   "prices": 50,
+   "links": 539,
+   "imgsVisible": 32,
+   "iframes": 19
+  }
+ ]
+}

@@ -91,5 +91,8 @@
       ],
       "use_dynamic_url": true
     }
+  ],
+  "optional_permissions": [
+    "webRequest"
   ]
 }

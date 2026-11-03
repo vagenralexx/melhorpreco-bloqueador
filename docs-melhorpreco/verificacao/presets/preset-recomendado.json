@@ -1,0 +1,178 @@
+{
+ "preset": "recomendado",
+ "errors": [],
+ "currentBefore": "Leve",
+ "applyMs": 2858,
+ "currentAfter": "Recomendado",
+ "pressed": "true",
+ "dnrError": "",
+ "ruleCountText": "20.293 regras, convertidas de 798.494 filtros de rede",
+ "enabled": [
+  "ublock-filters",
+  "easylist",
+  "easyprivacy",
+  "pgl",
+  "ublock-badware",
+  "urlhaus-full",
+  "bra-0",
+  "spa-1",
+  "hagezi-pro",
+  "hagezi-tif",
+  "hagezi-fake",
+  "hagezi-popupads"
+ ],
+ "available": 309974,
+ "sites": [
+  {
+   "url": "https://g1.globo.com/",
+   "blocked": 40,
+   "requests": 183,
+   "status": 200,
+   "finalUrl": "https://g1.globo.com/",
+   "textLen": 5344,
+   "prices": 4,
+   "imgs": 41
+  },
+  {
+   "url": "https://www.uol.com.br/",
+   "blocked": 15,
+   "requests": 166,
+   "status": 200,
+   "finalUrl": "https://www.uol.com.br/",
+   "textLen": 10502,
+   "prices": 7,
+   "imgs": 68
+  },
+  {
+   "url": "https://www.terra.com.br/",
+   "blocked": 9,
+   "requests": 210,
+   "status": 200,
+   "finalUrl": "https://www.terra.com.br/",
+   "textLen": 3855,
+   "prices": 5,
+   "imgs": 24
+  },
+  {
+   "url": "https://www1.folha.uol.com.br/",
+   "blocked": 5,
+   "requests": 68,
+   "status": 200,
+   "finalUrl": "https://www.folha.uol.com.br/",
+   "textLen": 30534,
+   "prices": 10,
+   "imgs": 25
+  },
+  {
+   "url": "https://www.estadao.com.br/",
+   "blocked": 79,
+   "requests": 222,
+   "status": 200,
+   "finalUrl": "https://www.estadao.com.br/",
+   "textLen": 12320,
+   "prices": 1,
+   "imgs": 27
+  },
+  {
+   "url": "https://www.metropoles.com/",
+   "blocked": 10,
+   "requests": 145,
+   "status": 200,
+   "finalUrl": "https://www.metropoles.com/",
+   "textLen": 13337,
+   "prices": 6,
+   "imgs": 65
+  },
+  {
+   "url": "https://www.tecmundo.com.br/",
+   "blocked": 61,
+   "requests": 177,
+   "status": 200,
+   "finalUrl": "https://www.estadao.com.br/tecmundo/",
+   "textLen": 8290,
+   "prices": 0,
+   "imgs": 16
+  },
+  {
+   "url": "https://www.mercadolivre.com.br/",
+   "blocked": 56,
+   "requests": 248,
+   "status": 200,
+   "finalUrl": "https://www.mercadolivre.com.br/",
+   "textLen": 4998,
+   "prices": 4,
+   "imgs": 74
+  },
+  {
+   "url": "https://www.americanas.com.br/",
+   "blocked": 2,
+   "requests": 194,
+   "status": 200,
+   "finalUrl": "https://www.americanas.com.br/",
+   "textLen": 5543,
+   "prices": 49,
+   "imgs": 74
+  },
+  {
+   "url": "https://www.casasbahia.com.br/",
+   "blocked": 81,
+   "requests": 273,
+   "status": 200,
+   "finalUrl": "https://www.casasbahia.com.br/",
+   "textLen": 20085,
+   "prices": 388,
+   "imgs": 172
+  },
+  {
+   "url": "https://www.kabum.com.br/",
+   "blocked": 74,
+   "requests": 279,
+   "status": 200,
+   "finalUrl": "https://www.kabum.com.br/",
+   "textLen": 13709,
+   "prices": 143,
+   "imgs": 77
+  },
+  {
+   "url": "https://www.zoom.com.br/",
+   "blocked": 46,
+   "requests": 194,
+   "status": 200,
+   "finalUrl": "https://www.zoom.com.br/",
+   "textLen": 7655,
+   "prices": 39,
+   "imgs": 55
+  }
+ ],
+ "stats": {
+  "off": false,
+  "blocked": "492",
+  "strict": "0",
+  "domains": "98",
+  "sites": "16",
+  "topDomains": [
+   "ib.adnxs.com 44",
+   "s.zst.com.br 43",
+   "print1.mercadoclics.com 39",
+   "www.google.com 39",
+   "ss.casasbahia.com.br 26"
+  ],
+  "topSites": [
+   "www.estadao.com.br 140",
+   "www.kabum.com.br 75",
+   "www.casasbahia.com.br 72",
+   "www.mercadolivre.com.br 57",
+   "www.zoom.com.br 46"
+  ],
+  "types": [
+   "Requisição de dados 270",
+   "Script 109",
+   "Imagem 92",
+   "Ping / beacon 15",
+   "Quadro incorporado 6"
+  ],
+  "hScroll": false
+ },
+ "sumBlockedObserved": 478,
+ "narrowHScroll": false
+}

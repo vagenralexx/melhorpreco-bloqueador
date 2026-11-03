@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="css/settings.css">
 <link rel="stylesheet" href="css/filter-editor.css">
 <link rel="stylesheet" href="css/develop.css">
+<link rel="stylesheet" href="css/mp.css">
 
 <link rel="icon" type="image/png" href="img/icon_64.png"/>
 </head>
@@ -28,11 +29,22 @@
      --><button class="tabButton" type="button" data-pane="settings" data-i18n="settingsPageName" tabindex="0"></button><!--
      --><button class="tabButton" type="button" data-pane="rulesets" data-i18n="aboutFilterLists" tabindex="0"></button><!--
      --><button class="tabButton" type="button" data-pane="filters" data-i18n="customFiltersPageName"tabindex="0"></button><!--
+     --><button class="tabButton" type="button" data-pane="stats" data-i18n="mpStatsPageName" tabindex="0"></button><!--
      --><button class="tabButton" type="button" data-pane="develop" data-i18n="developPageName"tabindex="0"></button><!--
      --><button class="tabButton" type="button" data-pane="about" data-i18n="aboutPageName" tabindex="0"></button>
     </nav>
     <!-- -------- -->
     <div data-pane-related="rulesets">
+        <fieldset id="mpPresets">
+            <legend data-i18n="mpPresetsLabel">_</legend>
+            <div class="mpPresetButtons">
+                <button type="button" data-preset="leve" aria-pressed="false"><span class="mpPresetName" data-i18n="mpPresetLeve">_</span><span class="mpPresetDesc" data-i18n="mpPresetLeveDesc">_</span></button>
+                <button type="button" data-preset="recomendado" aria-pressed="false"><span class="mpPresetName" data-i18n="mpPresetRecomendado">_</span><span class="mpPresetDesc" data-i18n="mpPresetRecomendadoDesc">_</span></button>
+                <button type="button" data-preset="maximo" aria-pressed="false"><span class="mpPresetName" data-i18n="mpPresetMaximo">_</span><span class="mpPresetDesc" data-i18n="mpPresetMaximoDesc">_</span></button>
+                <button type="button" data-preset="familia" aria-pressed="false"><span class="mpPresetName" data-i18n="mpPresetFamilia">_</span><span class="mpPresetDesc" data-i18n="mpPresetFamiliaDesc">_</span></button>
+            </div>
+            <p class="mpPresetHelp"><span data-i18n="mpPresetCurrent">_</span> <strong id="mpPresetCurrent"></strong>. <span data-i18n="mpPresetsHelp">_</span></p>
+        </fieldset>
         <p><span id="commit-spinner" class="fa-icon">spinner</span> <span id="listsOfBlockedHostsPrompt"></span></p>
         <p id="dnrError"></p>
         <p><input id="findInLists" type="search" spellcheck="false" placeholder="findListsPlaceholder" /></p>
@@ -124,6 +136,52 @@
         </p>
         </details>
     </aside>
+</section>
+
+<!-- -------- -->
+<section data-pane="stats">
+    <div id="mpStatsOff" hidden>
+        <h3 data-i18n="mpStatsOffTitle">_</h3>
+        <p data-i18n="mpStatsOffBody">_</p>
+        <p><button type="button" id="mpStatsEnable" class="preferred" data-i18n="mpStatsEnable">_</button></p>
+        <p id="mpStatsDenied" class="mpStatsWarn" role="status" hidden data-i18n="mpStatsDenied">_</p>
+    </div>
+    <div id="mpStatsOn" hidden>
+        <div class="mpStatsRange" role="radiogroup">
+            <label><input type="radio" name="mpRange" value="1" checked><span data-i18n="mpStatsRangeToday">_</span></label>
+            <label><input type="radio" name="mpRange" value="7"><span data-i18n="mpStatsRange7">_</span></label>
+            <label><input type="radio" name="mpRange" value="30"><span data-i18n="mpStatsRange30">_</span></label>
+        </div>
+        <div class="mpStatsTiles">
+            <div class="mpTile"><span class="mpTileValue" id="mpTileBlocked">0</span><span class="mpTileLabel" data-i18n="mpStatsTileBlocked">_</span></div>
+            <div class="mpTile"><span class="mpTileValue" id="mpTileStrict">0</span><span class="mpTileLabel" data-i18n="mpStatsTileStrict">_</span></div>
+            <div class="mpTile"><span class="mpTileValue" id="mpTileDomains">0</span><span class="mpTileLabel" data-i18n="mpStatsTileDomains">_</span></div>
+            <div class="mpTile"><span class="mpTileValue" id="mpTileSites">0</span><span class="mpTileLabel" data-i18n="mpStatsTileSites">_</span></div>
+        </div>
+        <p id="mpStatsEmpty" class="mpStatsMuted" hidden data-i18n="mpStatsEmpty">_</p>
+        <figure class="mpChart">
+            <figcaption id="mpChartTitle"></figcaption>
+            <div class="mpChartPlot">
+                <div class="mpChartAxis"><span id="mpChartMax">0</span><span>0</span></div>
+                <div class="mpChartBars" id="mpChartBars"></div>
+                <div class="mpTooltip" id="mpTooltip" role="tooltip" hidden></div>
+            </div>
+            <div class="mpChartXAxis" id="mpChartXAxis"></div>
+            <details class="mpChartTable"><summary data-i18n="mpStatsShowTable">_</summary>
+                <table><thead><tr><th data-i18n="mpStatsColPeriod">_</th><th data-i18n="mpStatsColBlocked">_</th></tr></thead><tbody id="mpChartTableBody"></tbody></table>
+            </details>
+        </figure>
+        <div class="mpStatsRanks">
+            <section class="mpRank"><h3 data-i18n="mpStatsTopDomains">_</h3><ol id="mpTopDomains"></ol></section>
+            <section class="mpRank"><h3 data-i18n="mpStatsTopSites">_</h3><ol id="mpTopSites"></ol></section>
+            <section class="mpRank"><h3 data-i18n="mpStatsByType">_</h3><ol id="mpTopTypes"></ol></section>
+        </div>
+        <p class="mpStatsMuted"><span data-i18n="mpStatsPrivacy">_</span> <span data-i18n="mpStatsNote">_</span></p>
+        <p class="mpStatsActions">
+            <button type="button" id="mpStatsClear" data-i18n="mpStatsClear">_</button>
+            <button type="button" id="mpStatsDisable" data-i18n="mpStatsDisable">_</button>
+        </p>
+    </div>
 </section>
 
 <!-- -------- -->
@@ -297,6 +355,8 @@
 <script src="js/settings.js" type="module"></script>
 <script src="js/filter-manager-ui.js" type="module"></script>
 <script src="js/develop.js" type="module"></script>
+<script src="js/mp-presets.js" type="module"></script>
+<script src="js/mp-stats-ui.js" type="module"></script>
 
 </body>
 </html>

@@ -11,6 +11,34 @@ Conferido em 03/11/2026.
 | `bra-0` | EasyList Portuguese | https://easylist-downloads.adblockplus.org/easylistportuguese.txt | GPLv3 (ou posterior) **ou** CC BY-SA 3.0, à escolha (https://easylist.to/pages/licence.html). Atribuição: "The EasyList authors (https://easylist.to/)" | Sim (usamos a opção GPLv3) | Ligado |
 | `procon-sp` | Procon-SP "Evite esses Sites" | https://sistemas.procon.sp.gov.br/evitesite/list/evitesites.php (gerada por `tools/make-procon-br.mjs`) | Dado público de órgão do governo de SP. **Sem licença explícita publicada.** | Provável, mas **não confirmado**: decisão do dono antes de publicar | Desligado |
 
+## Listas no estilo Pi-hole (listas DNS), todas opcionais
+
+Conferido em 03/11/2026 pela API do GitHub (licença do repositório e último push) e pelo cabeçalho de cada arquivo. Todas no formato AdBlock (`||dominio^`), exceto a StevenBlack (formato hosts); o gerador da uBOL lê os dois. Cada lista vira **uma** regra do Chrome com todos os domínios.
+
+| Ruleset | Lista | Fonte | Licença | Atualização | Domínios |
+|---|---|---|---|---|---|
+| `hagezi-pro` | HaGeZi Multi PRO | https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt | GPLv3 (https://github.com/hagezi/dns-blocklists/blob/main/LICENSE) | diária (03/11/2026) | ~248 mil |
+| `hagezi-ultimate` | HaGeZi Multi ULTIMATE | …/adblock/ultimate.txt | GPLv3 | diária | ~287 mil |
+| `hagezi-tif` | HaGeZi Threat Intelligence Feeds (medium) | …/adblock/tif.medium.txt | GPLv3 | diária | ~319 mil |
+| `hagezi-fake` | HaGeZi Fake (golpes, lojas falsas) | …/adblock/fake.txt | GPLv3 | diária | ~17,5 mil |
+| `hagezi-popupads` | HaGeZi Pop-Up Ads | …/adblock/popupads.txt | GPLv3 | diária | ~78 mil |
+| `hagezi-gambling` | HaGeZi Gambling (apostas) | …/adblock/gambling.txt | GPLv3 | diária | ~626 mil |
+| `oisd-big` | OISD big | https://big.oisd.nl/ | GPLv3 (https://github.com/sjhgvr/oisd/blob/main/LICENSE) | diária | ~232 mil |
+| `oisd-nsfw` | OISD nsfw (adulto) | https://nsfw.oisd.nl/ | GPLv3 | diária | ~486 mil |
+| `stevenblack` | StevenBlack Unified Hosts | https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts | MIT (https://github.com/StevenBlack/hosts/blob/master/license.txt) | 01/11/2026 | ~78 mil |
+
+Atenção: HaGeZi, OISD e StevenBlack **agregam** outras listas. Os mantenedores publicam sob as licenças acima, mas antes de publicar na loja vale ler a seção de fontes de cada repositório e conferir se alguma fonte agregada tem restrição de uso comercial.
+
+### Avaliadas e não embutidas
+| Lista | Motivo |
+|---|---|
+| AdGuard DNS filter (GPLv3, ativa) | Sobrepõe-se quase toda à EasyList/EasyPrivacy + HaGeZi. |
+| 1Hosts Lite (MPL-2.0) | Última atualização em 03/09/2026 e sobreposição com HaGeZi. |
+| The Block List Project | Repositório arquivado. |
+| lightswitch05/hosts, notracking/hosts-blocklists, FadeMind/hosts.extras | Repositórios arquivados. |
+| HaGeZi Light / Normal / Pro++ | Níveis intermediários do mesmo autor; PRO e ULTIMATE cobrem os dois extremos sem duplicar o pacote. |
+| Perflyst (Smart TV), WindowsSpyBlocker | Bloqueiam telemetria de TV/Windows, que não passa pelo navegador. |
+
 ## Listas que vêm do uBOL oficial (sem mudança)
 
 | Ruleset | Lista | Licença |

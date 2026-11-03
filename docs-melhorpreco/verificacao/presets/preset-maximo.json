@@ -1,0 +1,190 @@
+{
+ "preset": "maximo",
+ "errors": [],
+ "currentBefore": "Leve",
+ "applyMs": 3501,
+ "currentAfter": "Máximo",
+ "pressed": "true",
+ "dnrError": "",
+ "ruleCountText": "26.039 regras, convertidas de 1.155.259 filtros de rede",
+ "enabled": [
+  "ublock-filters",
+  "easylist",
+  "easyprivacy",
+  "pgl",
+  "ublock-badware",
+  "urlhaus-full",
+  "bra-0",
+  "spa-1",
+  "procon-sp",
+  "hagezi-ultimate",
+  "oisd-big",
+  "stevenblack",
+  "hagezi-tif",
+  "hagezi-fake",
+  "hagezi-popupads",
+  "adguard-spyware-url",
+  "annoyances-ai",
+  "annoyances-cookies",
+  "annoyances-overlays",
+  "annoyances-social",
+  "annoyances-widgets",
+  "annoyances-others",
+  "annoyances-notifications"
+ ],
+ "available": 304231,
+ "sites": [
+  {
+   "url": "https://g1.globo.com/",
+   "blocked": 40,
+   "requests": 183,
+   "status": 200,
+   "finalUrl": "https://g1.globo.com/",
+   "textLen": 5350,
+   "prices": 4,
+   "imgs": 41
+  },
+  {
+   "url": "https://www.uol.com.br/",
+   "blocked": 15,
+   "requests": 159,
+   "status": 200,
+   "finalUrl": "https://www.uol.com.br/",
+   "textLen": 10454,
+   "prices": 7,
+   "imgs": 66
+  },
+  {
+   "url": "https://www.terra.com.br/",
+   "blocked": 10,
+   "requests": 87,
+   "status": 200,
+   "finalUrl": "https://www.terra.com.br/",
+   "textLen": 4342,
+   "prices": 1,
+   "imgs": 24
+  },
+  {
+   "url": "https://www1.folha.uol.com.br/",
+   "blocked": 5,
+   "requests": 68,
+   "status": 200,
+   "finalUrl": "https://www.folha.uol.com.br/",
+   "textLen": 30348,
+   "prices": 10,
+   "imgs": 25
+  },
+  {
+   "url": "https://www.estadao.com.br/",
+   "blocked": 82,
+   "requests": 232,
+   "status": 200,
+   "finalUrl": "https://www.estadao.com.br/",
+   "textLen": 12320,
+   "prices": 1,
+   "imgs": 27
+  },
+  {
+   "url": "https://www.metropoles.com/",
+   "blocked": 11,
+   "requests": 131,
+   "status": 200,
+   "finalUrl": "https://www.metropoles.com/",
+   "textLen": 13337,
+   "prices": 6,
+   "imgs": 65
+  },
+  {
+   "url": "https://www.tecmundo.com.br/",
+   "blocked": 64,
+   "requests": 171,
+   "status": 200,
+   "finalUrl": "https://www.estadao.com.br/tecmundo/",
+   "textLen": 8286,
+   "prices": 0,
+   "imgs": 16
+  },
+  {
+   "url": "https://www.mercadolivre.com.br/",
+   "blocked": 64,
+   "requests": 332,
+   "status": 200,
+   "finalUrl": "https://www.mercadolivre.com.br/",
+   "textLen": 25287,
+   "prices": 270,
+   "imgs": 122
+  },
+  {
+   "url": "https://www.americanas.com.br/",
+   "blocked": 5,
+   "requests": 182,
+   "status": 200,
+   "finalUrl": "https://www.americanas.com.br/",
+   "textLen": 5369,
+   "prices": 49,
+   "imgs": 74
+  },
+  {
+   "url": "https://www.casasbahia.com.br/",
+   "blocked": 30,
+   "requests": 162,
+   "status": 200,
+   "finalUrl": "https://www.casasbahia.com.br/",
+   "textLen": 19802,
+   "prices": 388,
+   "imgs": 152
+  },
+  {
+   "url": "https://www.kabum.com.br/",
+   "blocked": 83,
+   "requests": 297,
+   "status": 200,
+   "finalUrl": "https://www.kabum.com.br/",
+   "textLen": 13667,
+   "prices": 143,
+   "imgs": 77
+  },
+  {
+   "url": "https://www.zoom.com.br/",
+   "blocked": 45,
+   "requests": 193,
+   "status": 200,
+   "finalUrl": "https://www.zoom.com.br/",
+   "textLen": 7655,
+   "prices": 39,
+   "imgs": 55
+  }
+ ],
+ "stats": {
+  "off": false,
+  "blocked": "467",
+  "strict": "0",
+  "domains": "103",
+  "sites": "14",
+  "topDomains": [
+   "ib.adnxs.com 44",
+   "www.google.com 43",
+   "s.zst.com.br 42",
+   "print1.mercadoclics.com 41",
+   "check.analytics.rlcdn.com 22"
+  ],
+  "topSites": [
+   "www.estadao.com.br 146",
+   "www.kabum.com.br 84",
+   "www.mercadolivre.com.br 65",
+   "g1.globo.com 45",
+   "www.zoom.com.br 45"
+  ],
+  "types": [
+   "Requisição de dados 243",
+   "Script 112",
+   "Imagem 96",
+   "Ping / beacon 10",
+   "Estilo 3",
+   "Quadro incorporado 3"
+  ],
+  "hScroll": false
+ },
+ "sumBlockedObserved": 454,
+ "narrowHScroll": false
+}

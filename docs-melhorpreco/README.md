@@ -29,6 +29,9 @@ Bloqueador de anúncios, rastreadores e sites perigosos para Google Chrome (Mani
 | Nova lista **Procon-SP "Evite esses Sites"** (`procon-sp`), opcional (desligada), gerada do endpoint oficial a cada build | `platform/mv3/rulesets.json`, `tools/make-procon-br.mjs` |
 | Build roda no Git Bash do Windows (troca de `jq` por `node`) | `tools/make-mv3.sh` |
 | Correção: o bloqueio estrito (página de aviso) da URLhaus e do Procon era descartado pelo teto de regex; listas de domínios agora têm prioridade | `platform/mv3/extension/js/ruleset-manager.js` |
+| 9 listas no estilo Pi-hole (listas DNS), opcionais: HaGeZi PRO, ULTIMATE, Threat Intelligence, Fake, Pop-Up Ads e Gambling; OISD Big e NSFW; StevenBlack | `platform/mv3/rulesets.json` |
+| **Modos de proteção** (Leve, Recomendado, Máximo, Família): um clique liga a combinação de listas; listas regionais e importadas são mantidas | `platform/mv3/extension/js/mp-presets.js`, `dashboard.html`, `css/mp.css` |
+| **Estatísticas** estilo Pi-hole (aba própria): bloqueios por hora/dia, domínios mais bloqueados, sites, tipos e páginas barradas. Usa a permissão **opcional** `webRequest`, pedida só quando o usuário ativa; dados só locais, por até 30 dias | `platform/mv3/extension/js/mp-stats*.js`, `chromium/manifest.json` |
 
 Licenças de cada lista: [LICENCAS-LISTAS.md](LICENCAS-LISTAS.md). Orçamento de regras do Chrome: [ORCAMENTO-REGRAS.md](ORCAMENTO-REGRAS.md). Prova ao vivo: [RELATORIO-VERIFICACAO.md](RELATORIO-VERIFICACAO.md). Lacunas e melhorias: [PROPOSTAS.md](PROPOSTAS.md).
 
@@ -51,3 +54,16 @@ As listas baixadas ficam em cache em `dist/build/mv3-data/`. Para compilar com a
 1. Abra `chrome://extensions` e ligue o **Modo do desenvolvedor**.
 2. **Carregar sem compactação** e escolha `dist/build/uBOLite.chromium`.
 3. Para filtros cosméticos e scriptlets completos, nos detalhes da extensão ligue **Permitir scripts do usuário** (exigência do Chrome para a API `userScripts`).
+4. Modo de proteção: painel → **Listas de filtros** → escolha Leve, Recomendado, Máximo ou Família.
+5. Estatísticas: painel → **Estatísticas** → **Ativar estatísticas** e aceite o pedido de permissão do Chrome.
+
+## Os modos de proteção
+
+| Modo | Listas ligadas | Regras (Chrome) | Para quem |
+|---|---|---|---|
+| Leve (padrão) | uBlock filters, EasyList, EasyPrivacy, Peter Lowe, Badware, URLhaus, EasyList Portuguese | 20.289 | Quem não quer nenhuma surpresa |
+| Recomendado | Leve + HaGeZi PRO, Threat Intelligence, Fake, Pop-Up Ads | 20.293 (798 mil filtros) | A maioria: mais proteção contra golpe e malware sem quebrar site nos testes |
+| Máximo | Leve + HaGeZi ULTIMATE, OISD Big, StevenBlack, Threat Intelligence, Fake, Pop-Up Ads, proteção de URL, todas as listas de incômodos (cookies, sobreposições, redes sociais, widgets, notificações, IA) e Procon-SP | 26.039 (1,15 milhão de filtros) | Quem quer o máximo e aceita liberar um site de vez em quando |
+| Família | Recomendado + HaGeZi Gambling (apostas), OISD NSFW (adulto) e Procon-SP | 20.294 | Computador de casa, crianças |
+
+O idioma do navegador continua ligando sozinho a lista regional (ex.: AdGuard Spanish/Portuguese), em qualquer modo. Mudar uma lista à mão mostra "Personalizado".

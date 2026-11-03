@@ -1,0 +1,21 @@
+{
+ "extInfo": {},
+ "results": [
+  {
+   "url": "https://www.kabum.com.br/",
+   "requests": 692,
+   "blocked": 0,
+   "failedOther": 12,
+   "blockedHosts": {},
+   "consoleErrors": 2,
+   "status": 200,
+   "loadMs": 10901,
+   "title": "KaBuM! | Ofertas em Tech e Gamer? Só se for no KaBuM!",
+   "textLen": 19465,
+   "prices": 204,
+   "links": 291,
+   "imgsVisible": 98,
+   "iframes": 14
+  }
+ ]
+}

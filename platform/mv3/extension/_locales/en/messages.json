@@ -256,12 +256,12 @@
     "description": "This describes the 'complete' filtering mode"
   },
   "noFilteringModeDescription": {
-      "message": "List of websites for which no filtering will take place.",
-      "description": "A short description for the editable field which lists trusted sites"
+    "message": "List of websites for which no filtering will take place.",
+    "description": "A short description for the editable field which lists trusted sites"
   },
   "noFilteringModePlaceholder": {
-      "message": "[hostnames only]\nexample.com\ngames.example\n...",
-      "description": "Default text for in edit field"
+    "message": "[hostnames only]\nexample.com\ngames.example\n...",
+    "description": "Default text for in edit field"
   },
   "behaviorSectionLabel": {
     "message": "Behavior",
@@ -462,5 +462,205 @@
   "unpickerUsage": {
     "message": "Select a filter below to highlight matching elements in the web page. Click the trash can to remove a filter.",
     "description": "Summary description on how to use the tool to remove custom filters"
+  },
+  "mpStatsPageName": {
+    "message": "Statistics",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsOffTitle": {
+    "message": "Blocking statistics",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsOffBody": {
+    "message": "See how many requests MP Bloqueador blocked, from which domains and on which sites, like the Pi-hole dashboard. Chrome asks for an extra permission to observe blocked requests. Data stays on this computer and is never sent anywhere.",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsEnable": {
+    "message": "Enable statistics",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsDenied": {
+    "message": "Permission was not granted. Statistics remain off.",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsDisable": {
+    "message": "Disable statistics",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsClear": {
+    "message": "Clear statistics",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsClearConfirm": {
+    "message": "Delete all stored statistics? This cannot be undone.",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsPrivacy": {
+    "message": "Data stays on this computer, for up to 30 days.",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsRangeLabel": {
+    "message": "Period",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsRangeToday": {
+    "message": "Today",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsRange7": {
+    "message": "7 days",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsRange30": {
+    "message": "30 days",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsTileBlocked": {
+    "message": "Blocked requests",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsTileStrict": {
+    "message": "Pages stopped with a warning",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsTileDomains": {
+    "message": "Distinct blocked domains",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsTileSites": {
+    "message": "Sites with blocking",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsChartHours": {
+    "message": "Blocks per hour, today",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsChartDays": {
+    "message": "Blocks per day",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsShowTable": {
+    "message": "Show as table",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsColPeriod": {
+    "message": "Period",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsColBlocked": {
+    "message": "Blocks",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsTopDomains": {
+    "message": "Top blocked domains",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsTopSites": {
+    "message": "Sites with most blocks",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsByType": {
+    "message": "By resource type",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsEmpty": {
+    "message": "Nothing blocked in this period yet. Browse a bit and come back.",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsNote": {
+    "message": "Unlike Pi-hole, there is no percentage of total: counting every request would keep the extension awake all the time.",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpType_script": {
+    "message": "Script",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpType_image": {
+    "message": "Image",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpType_xmlhttprequest": {
+    "message": "Data request",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpType_sub_frame": {
+    "message": "Embedded frame",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpType_stylesheet": {
+    "message": "Stylesheet",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpType_media": {
+    "message": "Media",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpType_font": {
+    "message": "Font",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpType_ping": {
+    "message": "Ping / beacon",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpType_websocket": {
+    "message": "WebSocket",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpType_main_frame": {
+    "message": "Page",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpType_other": {
+    "message": "Other",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpPresetsLabel": {
+    "message": "Protection mode",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpPresetsHelp": {
+    "message": "Each mode enables a tested combination of lists. Your regional and imported lists are kept. You can still toggle lists one by one below.",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpPresetLeve": {
+    "message": "Light",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpPresetLeveDesc": {
+    "message": "uBOL lists + EasyList Portuguese. Almost never breaks sites.",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpPresetRecomendado": {
+    "message": "Recommended",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpPresetRecomendadoDesc": {
+    "message": "Light + HaGeZi PRO DNS lists, threats, fake shops and pop-ups.",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpPresetMaximo": {
+    "message": "Maximum",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpPresetMaximoDesc": {
+    "message": "Everything that blocks ads, trackers and annoyances, including aggressive DNS lists. May break some sites.",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpPresetFamilia": {
+    "message": "Family",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpPresetFamiliaDesc": {
+    "message": "Recommended + blocks gambling, adult content and Procon-SP stores.",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpPresetCustom": {
+    "message": "Custom (manual selection)",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpPresetCurrent": {
+    "message": "Current mode:",
+    "description": "Melhor Preço Bloqueador"
   }
 }

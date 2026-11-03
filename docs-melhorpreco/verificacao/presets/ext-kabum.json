@@ -1,0 +1,74 @@
+{
+ "extInfo": {
+  "id": "mgkakfoihjfbbjdnefiaamheadaflhdh",
+  "enabledRulesets": [
+   "ublock-filters",
+   "easylist",
+   "easyprivacy",
+   "pgl",
+   "ublock-badware",
+   "urlhaus-full",
+   "bra-0",
+   "spa-1"
+  ],
+  "availableStaticRuleCount": 309978,
+  "manifest": {
+   "name": "Melhor Preço Bloqueador",
+   "version": "2026.1103.1617"
+  },
+  "matchedByRuleset": {
+   "ublock-filters": 6,
+   "easyprivacy": 59,
+   "pgl": 20,
+   "easylist": 2,
+   "spa-1": 1
+  }
+ },
+ "results": [
+  {
+   "url": "https://www.kabum.com.br/",
+   "requests": 307,
+   "blocked": 81,
+   "failedOther": 0,
+   "blockedHosts": {
+    "eitri.api.useinsider.com": 1,
+    "kabum.api.useinsider.com": 1,
+    "tag.goadopt.io": 1,
+    "dev.visualwebsiteoptimizer.com": 1,
+    "www.clarity.ms": 1,
+    "www.dwin1.com": 1,
+    "cdn.pn.vg": 1,
+    "www.googleadservices.com": 3,
+    "connect.facebook.net": 1,
+    "analytics.tiktok.com": 1,
+    "snap.licdn.com": 1,
+    "static.hotjar.com": 1,
+    "s.pinimg.com": 2,
+    "bat.bing.com": 1,
+    "tags.creativecdn.com": 1,
+    "websdk.appsflyer.com": 1,
+    "markadver.com": 1,
+    "dynamic.criteo.com": 1,
+    "x.cnt.my": 1,
+    "www.google.com": 29,
+    "www.google.com.br": 1,
+    "www.kabum.com.br": 14,
+    "stats.g.doubleclick.net": 1,
+    "analytics.google.com": 1,
+    "15999293.fls.doubleclick.net": 3,
+    "googleads.g.doubleclick.net": 8,
+    "px.ads.linkedin.com": 1,
+    "survey.solucx.com.br": 1
+   },
+   "consoleErrors": 80,
+   "status": 200,
+   "loadMs": 8831,
+   "title": "KaBuM! | Ofertas em Tech e Gamer? Só se for no KaBuM!",
+   "textLen": 13722,
+   "prices": 143,
+   "links": 257,
+   "imgsVisible": 81,
+   "iframes": 3
+  }
+ ]
+}

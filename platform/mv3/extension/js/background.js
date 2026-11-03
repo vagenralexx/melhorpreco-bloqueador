@@ -136,6 +136,7 @@ import { dnr } from './ext-compat.js';
 import { setPopupBlockMode } from './prevent-popup.js';
 import { supportsOffscreenDocument } from './ext-offscreen.js';
 import { toggleToolbarIcon } from './action.js';
+import './mp-stats.js';
 
 /******************************************************************************/
 

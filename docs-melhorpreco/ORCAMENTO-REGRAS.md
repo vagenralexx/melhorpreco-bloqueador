@@ -22,6 +22,27 @@ Fonte: documentação oficial, conferida em 03/11/2026:
 - **Teto que importa de verdade: regex.** As regras de bloqueio estrito (página de aviso) são regras de sessão com regex e disputam o limite de 1.000 (a uBOL usa até 950). A uBOL oficial estoura esse teto com o `ublock-badware` e descarta as listas seguintes. No fork, as listas de domínios passaram a ter prioridade (ver RELATORIO-VERIFICACAO.md, item 4).
 - Somos 58 rulesets declarados (o uBOL tem 56 + nossos 2); continuamos abaixo de 100. Ligados por padrão: 7 (6 do uBOL + `bra-0`), mais `spa-1` quando o navegador está em português.
 
+## Por modo de proteção (medido no painel, 03/11/2026)
+
+| Modo | Regras do Chrome | Filtros de rede | Folga até 30.000 garantidas |
+|---|---|---|---|
+| Leve | 20.289 | 137 mil | 9.711 |
+| Recomendado | 20.293 | 798 mil | 9.707 |
+| Família | 20.294 | 798 mil + apostas/adulto | 9.706 |
+| Máximo | 26.039 | 1,15 milhão | 3.961 |
+
+Listas DNS quase não gastam regras: cada uma vira uma regra só, com todos os domínios (`requestDomains`). O que pesa no Máximo são as listas de incômodos (cookies, sobreposições, etc.), que têm regras de verdade.
+
+## Tamanho do pacote (o custo real das listas DNS)
+
+| | Descompactado | Zip |
+|---|---|---|
+| Pacote completo (com as 9 listas DNS) | 149 MB | 38 MB |
+| Sem as listas DNS | ~33 MB | 9 MB |
+| Só apostas + adulto (modo Família) | 53 MB | — |
+
+Cada lista DNS aparece duas vezes: na regra de bloqueio e na regra da página de aviso (`rulesets/strictblock`). O Chrome ainda gera um índice próprio (`_metadata`, ~79 MB no teste) ao instalar. Proposta para reduzir: ver PROPOSTAS.md.
+
 ## Contagem por ruleset (build 2026.1103.1545, regras DNR)
 
 | Ruleset | Padrão | Regras | Regex | Bloqueio estrito |

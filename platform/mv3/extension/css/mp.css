@@ -1,0 +1,298 @@
+/* Melhor Preço Bloqueador: modos de proteção e estatísticas */
+
+:root {
+    --mp-bar: rgb(var(--primary-40));
+    --mp-bar-hover: rgb(var(--primary-30));
+    --mp-gap: var(--default-gap-small, 12px);
+    }
+:root.dark {
+    --mp-bar: rgb(var(--primary-60));
+    --mp-bar-hover: rgb(var(--primary-70));
+    }
+
+/* Pane wiring (mirrors dashboard.css) */
+body[data-pane="stats"]:not(.busy) > section[data-pane="stats"] {
+    display: block;
+    }
+body[data-pane="stats"] #dashboard-nav .tabButton[data-pane="stats"] {
+    background-color: var(--dashboard-tab-active-surface);
+    border-bottom: 3px solid var(--dashboard-tab-active-ink);
+    color: var(--dashboard-tab-active-ink);
+    fill: var(--dashboard-tab-active-ink);
+    }
+
+/* One more tab than upstream: tighten tabs so they fit on one line */
+nav > .tabButton {
+    padding-left: 1em;
+    padding-right: 1em;
+    }
+
+/* Protection modes */
+#mpPresets {
+    border: 0;
+    margin: 0 0 var(--mp-gap);
+    min-width: 0;
+    padding: 0;
+    }
+#mpPresets legend {
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    padding: 0;
+    }
+.mpPresetButtons {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    }
+.mpPresetButtons button {
+    align-items: flex-start;
+    background-color: var(--surface-1);
+    border: 1px solid var(--border-2);
+    border-radius: 6px;
+    color: var(--ink-1);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: flex-start;
+    min-height: 44px;
+    padding: 10px 12px;
+    text-align: start;
+    white-space: normal;
+    }
+.mpPresetButtons button:hover {
+    border-color: var(--mp-bar);
+    }
+.mpPresetButtons button:focus-visible {
+    outline: 2px solid var(--mp-bar);
+    outline-offset: 2px;
+    }
+.mpPresetButtons button[aria-pressed="true"] {
+    background-color: rgb(var(--dashboard-highlight-surface-rgb));
+    border: 2px solid var(--mp-bar);
+    padding: 9px 11px;
+    }
+.mpPresetButtons button[disabled] {
+    cursor: progress;
+    opacity: 0.6;
+    }
+/* dom.on() delegation only fires when the event target is the button itself */
+.mpPresetButtons button > span {
+    pointer-events: none;
+    }
+.mpPresetName {
+    font-weight: 600;
+    }
+.mpPresetButtons button[aria-pressed="true"] .mpPresetName::after {
+    content: ' \2713';
+    }
+.mpPresetDesc {
+    color: var(--ink-2);
+    font-size: 90%;
+    line-height: 1.35;
+    }
+.mpPresetHelp {
+    color: var(--ink-2);
+    font-size: 90%;
+    margin: 0.6em 0 0;
+    }
+
+/* Statistics */
+section[data-pane="stats"] {
+    padding-bottom: 2em;
+    }
+.mpStatsWarn {
+    font-weight: 600;
+    }
+.mpStatsMuted {
+    color: var(--ink-2);
+    font-size: 90%;
+    }
+.mpStatsRange {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: var(--mp-gap) 0;
+    }
+.mpStatsRange label {
+    align-items: center;
+    border: 1px solid var(--border-2);
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    gap: 6px;
+    min-height: 32px;
+    padding: 0 12px;
+    }
+.mpStatsRange label:has(input:checked) {
+    background-color: rgb(var(--dashboard-highlight-surface-rgb));
+    border-color: var(--mp-bar);
+    font-weight: 600;
+    }
+.mpStatsRange label:has(input:focus-visible) {
+    outline: 2px solid var(--mp-bar);
+    outline-offset: 2px;
+    }
+.mpStatsTiles {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    margin-bottom: var(--mp-gap);
+    }
+.mpTile {
+    background-color: var(--surface-1);
+    border: 1px solid var(--border-1);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px;
+    }
+.mpTileValue {
+    font-size: 1.8em;
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+    line-height: 1.1;
+    }
+.mpTileLabel {
+    color: var(--ink-2);
+    font-size: 90%;
+    }
+.mpChart {
+    margin: 0 0 var(--mp-gap);
+    }
+.mpChart figcaption {
+    font-weight: 600;
+    margin-bottom: 8px;
+    }
+.mpChartPlot {
+    display: flex;
+    gap: 6px;
+    height: 180px;
+    position: relative;
+    }
+.mpChartAxis {
+    color: var(--ink-3);
+    display: flex;
+    flex-direction: column;
+    font-size: 80%;
+    font-variant-numeric: tabular-nums;
+    justify-content: space-between;
+    min-width: 3ch;
+    text-align: end;
+    }
+.mpChartBars {
+    align-items: flex-end;
+    border-bottom: 1px solid var(--border-1);
+    display: flex;
+    flex: 1;
+    gap: 2px;
+    min-width: 0;
+    }
+.mpBar {
+    align-items: flex-end;
+    display: flex;
+    flex: 1;
+    height: 100%;
+    justify-content: center;
+    min-width: 0;
+    outline: none;
+    }
+.mpBar > span {
+    background-color: var(--mp-bar);
+    border-radius: 4px 4px 0 0;
+    display: block;
+    max-width: 24px;
+    pointer-events: none;
+    width: 100%;
+    }
+.mpBar:hover > span,
+.mpBar:focus-visible > span {
+    background-color: var(--mp-bar-hover);
+    }
+.mpBar:focus-visible {
+    box-shadow: inset 0 0 0 2px var(--mp-bar);
+    }
+.mpChartXAxis {
+    color: var(--ink-3);
+    display: flex;
+    font-size: 80%;
+    justify-content: space-between;
+    margin-left: calc(3ch + 6px);
+    margin-top: 4px;
+    }
+.mpTooltip {
+    background-color: var(--surface-0);
+    border: 1px solid var(--border-2);
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.2);
+    color: var(--ink-1);
+    font-size: 90%;
+    padding: 4px 8px;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    z-index: 10;
+    }
+.mpChartTable {
+    margin-top: 8px;
+    }
+.mpChartTable table {
+    border-collapse: collapse;
+    margin-top: 6px;
+    }
+.mpChartTable th,
+.mpChartTable td {
+    border-bottom: 1px solid var(--border-1);
+    padding: 2px 16px 2px 0;
+    text-align: start;
+    }
+.mpChartTable td:last-child {
+    font-variant-numeric: tabular-nums;
+    text-align: end;
+    }
+.mpStatsRanks {
+    display: grid;
+    gap: var(--mp-gap);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+.mpRank h3 {
+    font-size: 100%;
+    margin: 0 0 8px;
+    }
+.mpRank ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+.mpRank li {
+    display: grid;
+    gap: 2px 8px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    margin-bottom: 8px;
+    }
+.mpRankName {
+    overflow-wrap: anywhere;
+    }
+.mpRankCount {
+    color: var(--ink-2);
+    font-variant-numeric: tabular-nums;
+    }
+.mpRankBar {
+    background-color: var(--surface-2);
+    border-radius: 2px;
+    grid-column: 1 / -1;
+    height: 4px;
+    }
+.mpRankBar > span {
+    background-color: var(--mp-bar);
+    border-radius: 2px;
+    display: block;
+    height: 100%;
+    }
+.mpStatsActions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    }
