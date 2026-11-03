@@ -60,6 +60,10 @@ const reportedPage = (( ) => {
 
 /******************************************************************************/
 
+const ISSUES_URL = 'https://github.com/vagenralexx/melhorpreco-bloqueador/issues';
+
+/******************************************************************************/
+
 function reportSpecificFilterType() {
     return qs$('select[name="type"]').value;
 }
@@ -67,9 +71,8 @@ function reportSpecificFilterType() {
 /******************************************************************************/
 
 async function reportSpecificFilterIssue() {
-    const githubURL = new URL(
-        'https://github.com/uBlockOrigin/uAssets/issues/new?template=specific_report_from_ubol.yml'
-    );
+    // Melhor Preço Bloqueador: reports go to the fork's own issue tracker
+    const githubURL = new URL(`${ISSUES_URL}/new?template=problema-em-site.yml`);
     const issueType = reportSpecificFilterType();
     let title = `${reportedPage.hostname}: ${issueType}`;
     if ( qs$('#isNSFW').checked ) {
@@ -112,7 +115,7 @@ getTroubleshootingInfo(reportedPage).then(config => {
         });
 
         dom.on('[data-i18n="supportFindSpecificButton"]', 'click', ev => {
-            const url = new URL('https://github.com/uBlockOrigin/uAssets/issues');
+            const url = new URL(ISSUES_URL);
             url.searchParams.set('q', `is:issue sort:updated-desc "${reportedPage.hostname}" in:title`);
             sendMessage({ what: 'gotoURL', url: url.href });
             ev.preventDefault();

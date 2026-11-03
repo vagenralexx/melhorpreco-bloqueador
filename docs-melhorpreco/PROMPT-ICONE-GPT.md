@@ -1,8 +1,8 @@
 # Prompt para gerar o ícone do MP Bloqueador (ChatGPT / gerador de imagem)
 
 Anexe ao ChatGPT as duas imagens de referência da família Melhor Preço antes de colar o prompt:
-- `P:\Melhor_Preco\public\favicon.png` (ícone do app)
-- `P:\Melhor_Preco\chrome-extension\icons\icon128.png` (ícone da extensão do WhatsApp)
+- o ícone do app Melhor Preço (`public/favicon.png`)
+- o ícone da extensão do WhatsApp do Melhor Preço (`icon128.png`)
 
 ---
 

@@ -215,13 +215,26 @@ if [ "$FULL" = "yes" ]; then
         EXTENSION="xpi"
     fi
     echo "*** uBOLite.mv3: Creating publishable package..."
-    UBOL_PACKAGE_NAME="uBOLite_$TAGNAME.$PLATFORM.$EXTENSION"
+    UBOL_PACKAGE_NAME="MPBloqueador_$TAGNAME.$PLATFORM.$EXTENSION"
     UBOL_PACKAGE_DIR=$(mktemp -d)
     mkdir -p "$UBOL_PACKAGE_DIR"
     cp -R "$UBOL_DIR"/* "$UBOL_PACKAGE_DIR"/
     cd "$UBOL_PACKAGE_DIR" > /dev/null
     rm -f ./log.txt
-    zip "$UBOL_PACKAGE_NAME" -qr ./*
+    if command -v zip > /dev/null; then
+        zip "$UBOL_PACKAGE_NAME" -qr ./*
+    else
+        # Melhor Preco Bloqueador: Git Bash on Windows has no zip, use Python
+        python -I -c 'import os, sys, zipfile
+out = sys.argv[1]
+with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as z:
+    for root, dirs, files in os.walk("."):
+        for name in sorted(files):
+            path = os.path.join(root, name)
+            if os.path.normpath(path) == out:
+                continue
+            z.write(path, os.path.relpath(path, "."))' "$UBOL_PACKAGE_NAME"
+    fi
     cd - > /dev/null
     cp "$UBOL_PACKAGE_DIR"/"$UBOL_PACKAGE_NAME" dist/build/
     rm -rf "$UBOL_PACKAGE_DIR"

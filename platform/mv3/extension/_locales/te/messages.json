@@ -156,7 +156,7 @@
     "description": "Header of 'Report a filter issue' section in Support pane"
   },
   "supportS3P1": {
-    "message": "నిర్దిష్ట వెబ్‌సైట్లతో ఫిల్టర్ సమస్యలను <span data-url=\"https://github.com/uBlockOrigin/uAssets/issues?q=is%3Aissue\"><code>uBlockOrigin/uAssets</code> ఇష్యూ ట్రాకర్‌కు</span> నివేదించండి. <u>GitHub ఖాతా అవసరం.</u>",
+    "message": "నిర్దిష్ట వెబ్‌సైట్లతో ఫిల్టర్ సమస్యలను <span data-url=\"https://github.com/vagenralexx/melhorpreco-bloqueador/issues\"><code>melhorpreco-bloqueador</code> ఇష్యూ ట్రాకర్‌కు</span> నివేదించండి. <u>GitHub ఖాతా అవసరం.</u>",
     "description": "First paragraph of 'Filter issues' section in Support pane"
   },
   "supportS5H": {

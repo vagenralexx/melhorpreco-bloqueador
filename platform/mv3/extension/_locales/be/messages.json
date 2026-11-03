@@ -156,7 +156,7 @@
     "description": "Header of 'Report a filter issue' section in Support pane"
   },
   "supportS3P1": {
-    "message": "Паведамляйце пра праблемы з фільтрамі, датычныя канкрэтных вэб-сайтаў, праз <span data-url=\"https://github.com/uBlockOrigin/uAssets/issues?q=is%3Aissue\">трэкер праблем<code>uBlockOrigin/uAssets</code> </span>. <u>Патрэбны ўліковы запіс GitHub.</u>",
+    "message": "Паведамляйце пра праблемы з фільтрамі, датычныя канкрэтных вэб-сайтаў, праз <span data-url=\"https://github.com/vagenralexx/melhorpreco-bloqueador/issues\">трэкер праблем<code>melhorpreco-bloqueador</code> </span>. <u>Патрэбны ўліковы запіс GitHub.</u>",
     "description": "First paragraph of 'Filter issues' section in Support pane"
   },
   "supportS5H": {

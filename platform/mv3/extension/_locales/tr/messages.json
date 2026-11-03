@@ -156,7 +156,7 @@
     "description": "Header of 'Report a filter issue' section in Support pane"
   },
   "supportS3P1": {
-    "message": "Bir sitedeki filtre sorunlarını bildirmek için <span data-url=\"https://github.com/uBlockOrigin/uAssets/issues?q=is%3Aissue\"><code>uBlockOrigin/uAssets</code> sorun takibi</span> sayfasını kullanın. <u>Bir GitHub hesabı gerekir.</u>",
+    "message": "Bir sitedeki filtre sorunlarını bildirmek için <span data-url=\"https://github.com/vagenralexx/melhorpreco-bloqueador/issues\"><code>melhorpreco-bloqueador</code> sorun takibi</span> sayfasını kullanın. <u>Bir GitHub hesabı gerekir.</u>",
     "description": "First paragraph of 'Filter issues' section in Support pane"
   },
   "supportS5H": {

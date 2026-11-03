@@ -1,0 +1,36 @@
+name: Problema em um site
+description: Anúncio que passou, site quebrado ou bloqueio indevido
+title: "site: "
+labels: ["site"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por avisar. Se você abriu este formulário pelo botão **Relatar problema** da extensão, os campos abaixo já vêm preenchidos.
+        Não coloque senhas, dados pessoais nem endereços de páginas com informações privadas.
+  - type: input
+    id: url_address_of_the_web_page
+    attributes:
+      label: Endereço da página
+      placeholder: https://www.exemplo.com.br/
+    validations:
+      required: true
+  - type: input
+    id: category
+    attributes:
+      label: Tipo do problema
+      description: Ex.: anúncio aparecendo, site quebrado, aviso de bloqueio indevido, pop-up
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: O que aconteceu
+      description: Conte o que você esperava e o que viu. Prints ajudam.
+    validations:
+      required: true
+  - type: textarea
+    id: configuration
+    attributes:
+      label: Configuração da extensão
+      description: Preenchido automaticamente pelo botão Relatar problema (modo, listas ligadas, versão).

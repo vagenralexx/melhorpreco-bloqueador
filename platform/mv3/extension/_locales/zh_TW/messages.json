@@ -156,7 +156,7 @@
     "description": "Header of 'Report a filter issue' section in Support pane"
   },
   "supportS3P1": {
-    "message": "將特定網站的過濾器問題回報至 <span data-url=\"https://github.com/uBlockOrigin/uAssets/issues?q=is%3Aissue\"><code>uBlockOrigin/uAssets</code> 議題追蹤器</span>。<u>需要 GitHub 帳號。</u>.",
+    "message": "將特定網站的過濾器問題回報至 <span data-url=\"https://github.com/vagenralexx/melhorpreco-bloqueador/issues\"><code>melhorpreco-bloqueador</code> 議題追蹤器</span>。<u>需要 GitHub 帳號。</u>.",
     "description": "First paragraph of 'Filter issues' section in Support pane"
   },
   "supportS5H": {

@@ -156,7 +156,7 @@
     "description": "Header of 'Report a filter issue' section in Support pane"
   },
   "supportS3P1": {
-    "message": "특정 웹사이트에서 발생하는 필터 이슈를 <span data-url=\"https://github.com/uBlockOrigin/uAssets/issues?q=is%3Aissue\"><code>uBlockOrigin/uAssets</code> 이슈 트래커</span>에 신고할 수 있습니다. <u>GitHub 계정이 필요합니다.</u>",
+    "message": "특정 웹사이트에서 발생하는 필터 이슈를 <span data-url=\"https://github.com/vagenralexx/melhorpreco-bloqueador/issues\"><code>melhorpreco-bloqueador</code> 이슈 트래커</span>에 신고할 수 있습니다. <u>GitHub 계정이 필요합니다.</u>",
     "description": "First paragraph of 'Filter issues' section in Support pane"
   },
   "supportS5H": {

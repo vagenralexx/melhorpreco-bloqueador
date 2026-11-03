@@ -156,7 +156,7 @@
     "description": "Header of 'Report a filter issue' section in Support pane"
   },
   "supportS3P1": {
-    "message": "ನಿರ್ದಿಷ್ಟ ವೆಬ್ಸೈಟ್ಗಳೊಂದಿಗಿನ ಶೋಧಕ ಸಮಸ್ಯೆಗಳನ್ನು <span data-url=\"https://github.com/uBlockOrigin/uAssets/issues?q=is%3Aissue\"><code>uBlockOrigin/uAssets</code> ಸಮಸ್ಯೆ ಟ್ರ್ಯಾಕರ್ಗೆ</span> ವರದಿ ಮಾಡಿ. <u>GitHub ಖಾತೆಯ ಅಗತ್ಯವಿದೆ.</u>",
+    "message": "ನಿರ್ದಿಷ್ಟ ವೆಬ್ಸೈಟ್ಗಳೊಂದಿಗಿನ ಶೋಧಕ ಸಮಸ್ಯೆಗಳನ್ನು <span data-url=\"https://github.com/vagenralexx/melhorpreco-bloqueador/issues\"><code>melhorpreco-bloqueador</code> ಸಮಸ್ಯೆ ಟ್ರ್ಯಾಕರ್ಗೆ</span> ವರದಿ ಮಾಡಿ. <u>GitHub ಖಾತೆಯ ಅಗತ್ಯವಿದೆ.</u>",
     "description": "First paragraph of 'Filter issues' section in Support pane"
   },
   "supportS5H": {

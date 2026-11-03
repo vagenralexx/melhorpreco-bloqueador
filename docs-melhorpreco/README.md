@@ -43,7 +43,7 @@ Licenças de cada lista: [LICENCAS-LISTAS.md](LICENCAS-LISTAS.md). Orçamento de
 Requisitos: Git for Windows (Git Bash), Node.js 18+ (testado com 24), acesso à internet (as listas são baixadas no build).
 
 ```bash
-cd "D:/Smart Print/Documents/melhorpreco-bloqueador"
+cd melhorpreco-bloqueador
 git submodule update --init platform/mv3/extension/lib/codemirror/codemirror-ubol platform/mv3/extension/lib/s14e-serializer
 bash tools/make-mv3.sh chromium
 ```

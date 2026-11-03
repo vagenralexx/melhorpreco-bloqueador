@@ -1,6 +1,6 @@
 # Lacunas encontradas e melhorias propostas
 
-Fontes: código e testes desta sessão (RELATORIO-VERIFICACAO.md) e a pesquisa do GPT do dono (`D:\Smart Print\Downloads\Anuncios.md`). Cada item diz o que já está provado e o que é sugestão.
+Fontes: código e testes desta sessão (RELATORIO-VERIFICACAO.md) e a pesquisa do GPT do dono (arquivo local). Cada item diz o que já está provado e o que é sugestão.
 
 ## Decisões do dono antes de publicar
 
