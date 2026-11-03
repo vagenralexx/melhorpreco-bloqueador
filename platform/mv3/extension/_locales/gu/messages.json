@@ -1,6 +1,6 @@
 {
   "extName": {
-    "message": "uBlock Origin Lite",
+    "message": "Melhor Preço Bloqueador",
     "description": "extension name."
   },
   "extShortDesc": {
@@ -12,8 +12,8 @@
     "description": "Appears aside each filter list in the _3rd-party filters_ pane"
   },
   "dashboardName": {
-    "message": "uBO Lite — ડેશબોર્ડ",
-    "description": "English: uBO Lite — Dashboard"
+    "message": "MP Bloqueador — ડેશબોર્ડ",
+    "description": "English: MP Bloqueador — Dashboard"
   },
   "settingsPageName": {
     "message": "સેટિંગ્સ",
@@ -108,7 +108,7 @@
     "description": "Placeholder text which describes the purpose of the textarea widget"
   },
   "customListImportUserScriptsInfo": {
-    "message": "To enforce cosmetic or scriptlet filters from imported lists, you must grant uBO Lite permission to run user scripts.",
+    "message": "To enforce cosmetic or scriptlet filters from imported lists, you must grant MP Bloqueador permission to run user scripts.",
     "description": "A notice to inform user that the enforcement of some filters requires permission to execute 'user scripts'"
   },
   "customFiltersImportExportLabel": {
@@ -120,7 +120,7 @@
     "description": "Placeholder text which describes the purpose of the textarea widget"
   },
   "userScriptsInfo": {
-    "message": "તમારા બ્રાઉઝરનું એક્સ્ટેંશન પેજ ખોલો (Chrome માં <code>chrome://extensions</code> અથવા Firefox માં <code>about:addons</code>), <b>uBO Lite</b> વિગતો ખોલો, અને <b>વપરાશકર્તા સ્ક્રિપ્ટોને મંજૂરી આપો</b> (જેને “અવેરિફાઇડ તૃતીય-પક્ષ સ્ક્રિપ્ટો” તરીકે પણ ઓળખવામાં આવે છે) ચાલુ કરો.",
+    "message": "તમારા બ્રાઉઝરનું એક્સ્ટેંશન પેજ ખોલો (Chrome માં <code>chrome://extensions</code> અથવા Firefox માં <code>about:addons</code>), <b>MP Bloqueador</b> વિગતો ખોલો, અને <b>વપરાશકર્તા સ્ક્રિપ્ટોને મંજૂરી આપો</b> (જેને “અવેરિફાઇડ તૃતીય-પક્ષ સ્ક્રિપ્ટો” તરીકે પણ ઓળખવામાં આવે છે) ચાલુ કરો.",
     "description": "A notice to inform user on how to enable 'user scripts' permission"
   },
   "aboutChangelog": {
@@ -192,7 +192,7 @@
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option3": {
-    "message": "uBO Lite શોધી કાઢે છે",
+    "message": "MP Bloqueador શોધી કાઢે છે",
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option4": {
@@ -200,7 +200,7 @@
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option5": {
-    "message": "uBO Lite સક્ષમ હોય ત્યારે ખામીઓ",
+    "message": "MP Bloqueador સક્ષમ હોય ત્યારે ખામીઓ",
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option6": {
@@ -296,7 +296,7 @@
     "description": "Header for filter-creation section in the dashboard"
   },
   "sandboxEditorUserScriptsInfo": {
-    "message": "To enforce cosmetic or scriptlet filters from the sandbox, you must grant uBO Lite permission to run user scripts.",
+    "message": "To enforce cosmetic or scriptlet filters from the sandbox, you must grant MP Bloqueador permission to run user scripts.",
     "description": "A notice to inform user that the enforcement of some filters requires permission to execute 'user scripts'"
   },
   "developerModeLabel": {
@@ -328,7 +328,7 @@
     "description": "Web page title for the strict-blocked page"
   },
   "strictblockSentence1": {
-    "message": "uBO Lite એ નીચેના પેજને લોડ થતા અટકાવ્યું છે:",
+    "message": "MP Bloqueador એ નીચેના પેજને લોડ થતા અટકાવ્યું છે:",
     "description": "Sentence used in the strict-blocked page"
   },
   "strictblockReasonSentence1": {

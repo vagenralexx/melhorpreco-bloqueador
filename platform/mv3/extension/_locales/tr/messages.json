@@ -1,6 +1,6 @@
 {
   "extName": {
-    "message": "uBlock Origin Lite",
+    "message": "Melhor Preço Bloqueador",
     "description": "extension name."
   },
   "extShortDesc": {
@@ -12,8 +12,8 @@
     "description": "Appears aside each filter list in the _3rd-party filters_ pane"
   },
   "dashboardName": {
-    "message": "uBO Lite — Kontrol Paneli",
-    "description": "English: uBO Lite — Dashboard"
+    "message": "MP Bloqueador — Kontrol Paneli",
+    "description": "English: MP Bloqueador — Dashboard"
   },
   "settingsPageName": {
     "message": "Ayarlar",
@@ -108,7 +108,7 @@
     "description": "Placeholder text which describes the purpose of the textarea widget"
   },
   "customListImportUserScriptsInfo": {
-    "message": "İçe aktarılan listelerden kozmetik veya scriptlet filtrelerini uygulamak için, uBO Lite’a kullanıcı komut dosyalarını çalıştırma izni vermeniz gerekir.",
+    "message": "İçe aktarılan listelerden kozmetik veya scriptlet filtrelerini uygulamak için, MP Bloqueador’a kullanıcı komut dosyalarını çalıştırma izni vermeniz gerekir.",
     "description": "A notice to inform user that the enforcement of some filters requires permission to execute 'user scripts'"
   },
   "customFiltersImportExportLabel": {
@@ -120,7 +120,7 @@
     "description": "Placeholder text which describes the purpose of the textarea widget"
   },
   "userScriptsInfo": {
-    "message": "Tarayıcınızın uzantılar sayfasını açın (Chrome için:<code>chrome://extensions</code> Firefox için:<code>about:addons</code>), <b>uBO Lite</b>'ın ayrıntılar sayfasına tıklayın ve <b>Kullanıcı komut dosyalarına izin ver</b> seçeneğine tıklayın (\"doğrulanmamış 3. parti komutlar\" olarak da adlandırılabilir).",
+    "message": "Tarayıcınızın uzantılar sayfasını açın (Chrome için:<code>chrome://extensions</code> Firefox için:<code>about:addons</code>), <b>MP Bloqueador</b>'ın ayrıntılar sayfasına tıklayın ve <b>Kullanıcı komut dosyalarına izin ver</b> seçeneğine tıklayın (\"doğrulanmamış 3. parti komutlar\" olarak da adlandırılabilir).",
     "description": "A notice to inform user on how to enable 'user scripts' permission"
   },
   "aboutChangelog": {
@@ -192,7 +192,7 @@
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option3": {
-    "message": "uBO Lite tespit ediliyor",
+    "message": "MP Bloqueador tespit ediliyor",
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option4": {
@@ -200,7 +200,7 @@
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option5": {
-    "message": "uBO Lite kullanımdayken sayfa bozuluyor ",
+    "message": "MP Bloqueador kullanımdayken sayfa bozuluyor ",
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option6": {
@@ -296,7 +296,7 @@
     "description": "Header for filter-creation section in the dashboard"
   },
   "sandboxEditorUserScriptsInfo": {
-    "message": "Sandbox'tan kozmetik veya scriptlet filtrelerini uygulamak için, uBO Lite'a kullanıcı komut dosyalarını çalıştırma izni vermeniz gerekir.",
+    "message": "Sandbox'tan kozmetik veya scriptlet filtrelerini uygulamak için, MP Bloqueador'a kullanıcı komut dosyalarını çalıştırma izni vermeniz gerekir.",
     "description": "A notice to inform user that the enforcement of some filters requires permission to execute 'user scripts'"
   },
   "developerModeLabel": {

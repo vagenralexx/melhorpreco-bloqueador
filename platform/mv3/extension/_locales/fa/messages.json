@@ -1,6 +1,6 @@
 {
   "extName": {
-    "message": "uBlock Origin Lite",
+    "message": "Melhor Preço Bloqueador",
     "description": "extension name."
   },
   "extShortDesc": {
@@ -12,8 +12,8 @@
     "description": "Appears aside each filter list in the _3rd-party filters_ pane"
   },
   "dashboardName": {
-    "message": "uBO Lite - داشبورد",
-    "description": "English: uBO Lite — Dashboard"
+    "message": "MP Bloqueador - داشبورد",
+    "description": "English: MP Bloqueador — Dashboard"
   },
   "settingsPageName": {
     "message": "تنظیمات",
@@ -108,7 +108,7 @@
     "description": "Placeholder text which describes the purpose of the textarea widget"
   },
   "customListImportUserScriptsInfo": {
-    "message": "برای اعمال فیلترهای ظاهری یا اسکریپت‌لت از لیست‌های وارد شده، باید به uBO Lite اجازه اجرای اسکریپت‌های کاربر را بدهید.",
+    "message": "برای اعمال فیلترهای ظاهری یا اسکریپت‌لت از لیست‌های وارد شده، باید به MP Bloqueador اجازه اجرای اسکریپت‌های کاربر را بدهید.",
     "description": "A notice to inform user that the enforcement of some filters requires permission to execute 'user scripts'"
   },
   "customFiltersImportExportLabel": {
@@ -120,7 +120,7 @@
     "description": "Placeholder text which describes the purpose of the textarea widget"
   },
   "userScriptsInfo": {
-    "message": "صفحه افزونه‌های مرورگر خود را باز کنید (<code>chrome://extensions</code> در کروم یا <code>about:addons</code> در فایرفاکس)، جزئیات <b>uBO Lite</b> را باز کنید و گزینه <b>اجازه به اسکریپت‌های کاربر</b> (که به عنوان \"اسکریپت‌های شخص ثالث تایید نشده\" نیز شناخته می‌شود) را فعال کنید.",
+    "message": "صفحه افزونه‌های مرورگر خود را باز کنید (<code>chrome://extensions</code> در کروم یا <code>about:addons</code> در فایرفاکس)، جزئیات <b>MP Bloqueador</b> را باز کنید و گزینه <b>اجازه به اسکریپت‌های کاربر</b> (که به عنوان \"اسکریپت‌های شخص ثالث تایید نشده\" نیز شناخته می‌شود) را فعال کنید.",
     "description": "A notice to inform user on how to enable 'user scripts' permission"
   },
   "aboutChangelog": {
@@ -192,7 +192,7 @@
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option3": {
-    "message": "شناسایی uBO Lite",
+    "message": "شناسایی MP Bloqueador",
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option4": {
@@ -200,7 +200,7 @@
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option5": {
-    "message": "هنگام فعال بودن uBO Lite دچار نقص می‌شود",
+    "message": "هنگام فعال بودن MP Bloqueador دچار نقص می‌شود",
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option6": {
@@ -296,7 +296,7 @@
     "description": "Header for filter-creation section in the dashboard"
   },
   "sandboxEditorUserScriptsInfo": {
-    "message": "برای اعمال فیلترهای ظاهری یا اسکریپت‌لت از سندباکس، باید به uBO Lite اجازه اجرای اسکریپت‌های کاربر را بدهید.",
+    "message": "برای اعمال فیلترهای ظاهری یا اسکریپت‌لت از سندباکس، باید به MP Bloqueador اجازه اجرای اسکریپت‌های کاربر را بدهید.",
     "description": "A notice to inform user that the enforcement of some filters requires permission to execute 'user scripts'"
   },
   "developerModeLabel": {
@@ -328,7 +328,7 @@
     "description": "Web page title for the strict-blocked page"
   },
   "strictblockSentence1": {
-    "message": "uBO Lite از بارگذاری صفحه زیر جلوگیری کرده است:",
+    "message": "MP Bloqueador از بارگذاری صفحه زیر جلوگیری کرده است:",
     "description": "Sentence used in the strict-blocked page"
   },
   "strictblockReasonSentence1": {

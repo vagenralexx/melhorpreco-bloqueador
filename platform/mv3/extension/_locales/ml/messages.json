@@ -1,6 +1,6 @@
 {
   "extName": {
-    "message": "uBlock Origin Lite",
+    "message": "Melhor Preço Bloqueador",
     "description": "extension name."
   },
   "extShortDesc": {
@@ -13,7 +13,7 @@
   },
   "dashboardName": {
     "message": "uBO ലൈറ്റ് - ഡാഷ്ബോർഡ്",
-    "description": "English: uBO Lite — Dashboard"
+    "description": "English: MP Bloqueador — Dashboard"
   },
   "settingsPageName": {
     "message": "ക്രമീകരണങ്ങൾ",
@@ -108,7 +108,7 @@
     "description": "Placeholder text which describes the purpose of the textarea widget"
   },
   "customListImportUserScriptsInfo": {
-    "message": "To enforce cosmetic or scriptlet filters from imported lists, you must grant uBO Lite permission to run user scripts.",
+    "message": "To enforce cosmetic or scriptlet filters from imported lists, you must grant MP Bloqueador permission to run user scripts.",
     "description": "A notice to inform user that the enforcement of some filters requires permission to execute 'user scripts'"
   },
   "customFiltersImportExportLabel": {
@@ -120,7 +120,7 @@
     "description": "Placeholder text which describes the purpose of the textarea widget"
   },
   "userScriptsInfo": {
-    "message": "നിങ്ങളുടെ ബ്രൗസറിന്റെ എക്സ്റ്റൻഷനുകൾ പേജ് തുറക്കുക (Chrome-ൽ <code>chrome://extensions</code> അല്ലെങ്കിൽ Firefox-ൽ <code>about:addons</code>), <b>uBO Lite</b> വിശദാംശങ്ങൾ തുറക്കുക, <b>യൂസർ സ്ക്രിപ്റ്റുകൾ അനുവദിക്കുക</b> (മറ്റൊരു വിധത്തിൽ “പരിശോധിക്കാത്ത മൂന്നാം കക്ഷി സ്ക്രിപ്റ്റുകൾ” എന്നും അറിയപ്പെടുന്നു) ടോഗിൾ ഓണാക്കുക.",
+    "message": "നിങ്ങളുടെ ബ്രൗസറിന്റെ എക്സ്റ്റൻഷനുകൾ പേജ് തുറക്കുക (Chrome-ൽ <code>chrome://extensions</code> അല്ലെങ്കിൽ Firefox-ൽ <code>about:addons</code>), <b>MP Bloqueador</b> വിശദാംശങ്ങൾ തുറക്കുക, <b>യൂസർ സ്ക്രിപ്റ്റുകൾ അനുവദിക്കുക</b> (മറ്റൊരു വിധത്തിൽ “പരിശോധിക്കാത്ത മൂന്നാം കക്ഷി സ്ക്രിപ്റ്റുകൾ” എന്നും അറിയപ്പെടുന്നു) ടോഗിൾ ഓണാക്കുക.",
     "description": "A notice to inform user on how to enable 'user scripts' permission"
   },
   "aboutChangelog": {
@@ -192,7 +192,7 @@
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option3": {
-    "message": "uBO Lite-നെ കണ്ടെത്തുന്നു",
+    "message": "MP Bloqueador-നെ കണ്ടെത്തുന്നു",
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option4": {
@@ -200,7 +200,7 @@
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option5": {
-    "message": "uBO Lite പ്രവർത്തനക്ഷമമാകുമ്പോൾ തകരാറിലാകുന്നു",
+    "message": "MP Bloqueador പ്രവർത്തനക്ഷമമാകുമ്പോൾ തകരാറിലാകുന്നു",
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option6": {
@@ -296,7 +296,7 @@
     "description": "Header for filter-creation section in the dashboard"
   },
   "sandboxEditorUserScriptsInfo": {
-    "message": "To enforce cosmetic or scriptlet filters from the sandbox, you must grant uBO Lite permission to run user scripts.",
+    "message": "To enforce cosmetic or scriptlet filters from the sandbox, you must grant MP Bloqueador permission to run user scripts.",
     "description": "A notice to inform user that the enforcement of some filters requires permission to execute 'user scripts'"
   },
   "developerModeLabel": {
@@ -328,7 +328,7 @@
     "description": "Web page title for the strict-blocked page"
   },
   "strictblockSentence1": {
-    "message": "ഇനിപ്പറയുന്ന പേജ് ലോഡാകുന്നതിൽ നിന്ന് uBO Lite തടഞ്ഞു:",
+    "message": "ഇനിപ്പറയുന്ന പേജ് ലോഡാകുന്നതിൽ നിന്ന് MP Bloqueador തടഞ്ഞു:",
     "description": "Sentence used in the strict-blocked page"
   },
   "strictblockReasonSentence1": {

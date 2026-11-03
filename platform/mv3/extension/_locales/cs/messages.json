@@ -1,6 +1,6 @@
 {
   "extName": {
-    "message": "uBlock Origin Lite",
+    "message": "Melhor Preço Bloqueador",
     "description": "extension name."
   },
   "extShortDesc": {
@@ -12,8 +12,8 @@
     "description": "Appears aside each filter list in the _3rd-party filters_ pane"
   },
   "dashboardName": {
-    "message": "uBO Lite - Ovládací panel",
-    "description": "English: uBO Lite — Dashboard"
+    "message": "MP Bloqueador - Ovládací panel",
+    "description": "English: MP Bloqueador — Dashboard"
   },
   "settingsPageName": {
     "message": "Nastavení",
@@ -108,7 +108,7 @@
     "description": "Placeholder text which describes the purpose of the textarea widget"
   },
   "customListImportUserScriptsInfo": {
-    "message": "Chcete-li použít filtry vzhledu nebo skriptové filtry z importovaných seznamů, musíte uBO Lite udělit oprávnění ke spouštění uživatelských skriptů.",
+    "message": "Chcete-li použít filtry vzhledu nebo skriptové filtry z importovaných seznamů, musíte MP Bloqueador udělit oprávnění ke spouštění uživatelských skriptů.",
     "description": "A notice to inform user that the enforcement of some filters requires permission to execute 'user scripts'"
   },
   "customFiltersImportExportLabel": {
@@ -120,7 +120,7 @@
     "description": "Placeholder text which describes the purpose of the textarea widget"
   },
   "userScriptsInfo": {
-    "message": "Otevřete stránku s rozšířeními ve svém prohlížeči (<code>chrome://extensions</code> v prohlížeči Chrome nebo <code>about:addons</code> v prohlížeči Firefox), otevřete podrobnosti o rozšíření <b>uBO Lite</b> a zapněte volbu <b>Povolit uživatelské skripty</b> (také označované jako \"neověřené skripty třetích stran\").",
+    "message": "Otevřete stránku s rozšířeními ve svém prohlížeči (<code>chrome://extensions</code> v prohlížeči Chrome nebo <code>about:addons</code> v prohlížeči Firefox), otevřete podrobnosti o rozšíření <b>MP Bloqueador</b> a zapněte volbu <b>Povolit uživatelské skripty</b> (také označované jako \"neověřené skripty třetích stran\").",
     "description": "A notice to inform user on how to enable 'user scripts' permission"
   },
   "aboutChangelog": {
@@ -192,7 +192,7 @@
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option3": {
-    "message": "Detekuje uBO Lite",
+    "message": "Detekuje MP Bloqueador",
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option4": {
@@ -200,7 +200,7 @@
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option5": {
-    "message": "Je rozbitá, když je povolen uBO Lite",
+    "message": "Je rozbitá, když je povolen MP Bloqueador",
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option6": {
@@ -296,7 +296,7 @@
     "description": "Header for filter-creation section in the dashboard"
   },
   "sandboxEditorUserScriptsInfo": {
-    "message": "Chcete-li v sandboxu aktivovat filtry vzhledu nebo skriptové filtry, musíte uBO Lite udělit oprávnění ke spouštění uživatelských skriptů.",
+    "message": "Chcete-li v sandboxu aktivovat filtry vzhledu nebo skriptové filtry, musíte MP Bloqueador udělit oprávnění ke spouštění uživatelských skriptů.",
     "description": "A notice to inform user that the enforcement of some filters requires permission to execute 'user scripts'"
   },
   "developerModeLabel": {
@@ -328,7 +328,7 @@
     "description": "Web page title for the strict-blocked page"
   },
   "strictblockSentence1": {
-    "message": "uBO Lite zabránil načtení následující stránky:",
+    "message": "MP Bloqueador zabránil načtení následující stránky:",
     "description": "Sentence used in the strict-blocked page"
   },
   "strictblockReasonSentence1": {

@@ -1,6 +1,6 @@
 {
   "extName": {
-    "message": "uBlock Origin Lite",
+    "message": "Melhor Preço Bloqueador",
     "description": "extension name."
   },
   "extShortDesc": {
@@ -12,8 +12,8 @@
     "description": "Appears aside each filter list in the _3rd-party filters_ pane"
   },
   "dashboardName": {
-    "message": "uBO Lite — ড্যাশবোর্ড",
-    "description": "English: uBO Lite — Dashboard"
+    "message": "MP Bloqueador — ড্যাশবোর্ড",
+    "description": "English: MP Bloqueador — Dashboard"
   },
   "settingsPageName": {
     "message": "সেটিংস",
@@ -108,7 +108,7 @@
     "description": "Placeholder text which describes the purpose of the textarea widget"
   },
   "customListImportUserScriptsInfo": {
-    "message": "To enforce cosmetic or scriptlet filters from imported lists, you must grant uBO Lite permission to run user scripts.",
+    "message": "To enforce cosmetic or scriptlet filters from imported lists, you must grant MP Bloqueador permission to run user scripts.",
     "description": "A notice to inform user that the enforcement of some filters requires permission to execute 'user scripts'"
   },
   "customFiltersImportExportLabel": {
@@ -120,7 +120,7 @@
     "description": "Placeholder text which describes the purpose of the textarea widget"
   },
   "userScriptsInfo": {
-    "message": "আপনার ব্রাউজারের এক্সটেনশন পৃষ্ঠা খুলুন (Chrome-এ <code>chrome://extensions</code> অথবা Firefox-এ <code>about:addons</code>), <b>uBO Lite</b>-এর বিস্তারিত খুলুন, এবং <b>Allow user scripts</b> (যা \"অযাচাইকৃত তৃতীয়-পক্ষ স্ক্রিপ্ট\" নামেও পরিচিত) চালু করুন।",
+    "message": "আপনার ব্রাউজারের এক্সটেনশন পৃষ্ঠা খুলুন (Chrome-এ <code>chrome://extensions</code> অথবা Firefox-এ <code>about:addons</code>), <b>MP Bloqueador</b>-এর বিস্তারিত খুলুন, এবং <b>Allow user scripts</b> (যা \"অযাচাইকৃত তৃতীয়-পক্ষ স্ক্রিপ্ট\" নামেও পরিচিত) চালু করুন।",
     "description": "A notice to inform user on how to enable 'user scripts' permission"
   },
   "aboutChangelog": {
@@ -296,7 +296,7 @@
     "description": "Header for filter-creation section in the dashboard"
   },
   "sandboxEditorUserScriptsInfo": {
-    "message": "To enforce cosmetic or scriptlet filters from the sandbox, you must grant uBO Lite permission to run user scripts.",
+    "message": "To enforce cosmetic or scriptlet filters from the sandbox, you must grant MP Bloqueador permission to run user scripts.",
     "description": "A notice to inform user that the enforcement of some filters requires permission to execute 'user scripts'"
   },
   "developerModeLabel": {

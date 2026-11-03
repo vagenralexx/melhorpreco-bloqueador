@@ -7,11 +7,11 @@
     },
     "default_popup": "popup.html"
   },
-  "author": "Raymond Hill",
+  "author": "Melhor Preço (fork do uBlock Origin Lite de Raymond Hill)",
   "background": {
-      "service_worker": "/js/background.js",
-      "type": "module"
-   },
+    "service_worker": "/js/background.js",
+    "type": "module"
+  },
   "commands": {
     "enter-zapper-mode": {
       "description": "__MSG_zapperTipEnter__"
@@ -21,10 +21,9 @@
     }
   },
   "declarative_net_request": {
-    "rule_resources": [
-    ]
+    "rule_resources": []
   },
-  "default_locale": "en",
+  "default_locale": "pt_BR",
   "description": "__MSG_extShortDesc__",
   "host_permissions": [
     "<all_urls>"
@@ -50,7 +49,7 @@
     "unlimitedStorage",
     "userScripts"
   ],
-  "short_name": "uBO Lite",
+  "short_name": "MP Bloqueador",
   "storage": {
     "managed_schema": "managed_storage.json"
   },

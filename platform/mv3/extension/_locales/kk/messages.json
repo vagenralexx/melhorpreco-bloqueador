@@ -1,6 +1,6 @@
 {
   "extName": {
-    "message": "uBlock Origin Lite",
+    "message": "Melhor Preço Bloqueador",
     "description": "extension name."
   },
   "extShortDesc": {
@@ -12,8 +12,8 @@
     "description": "Appears aside each filter list in the _3rd-party filters_ pane"
   },
   "dashboardName": {
-    "message": "uBO Lite — Бақылау тақтасы",
-    "description": "English: uBO Lite — Dashboard"
+    "message": "MP Bloqueador — Бақылау тақтасы",
+    "description": "English: MP Bloqueador — Dashboard"
   },
   "settingsPageName": {
     "message": "Баптаулар",
@@ -108,7 +108,7 @@
     "description": "Placeholder text which describes the purpose of the textarea widget"
   },
   "customListImportUserScriptsInfo": {
-    "message": "Импортталған тізімдердегі косметикалық немесе сценарий сүзгілерін орындау үшін uBO Lite қолданбасына пайдаланушы сценарийлерін іске қосуға рұқсат беруіңіз керек.",
+    "message": "Импортталған тізімдердегі косметикалық немесе сценарий сүзгілерін орындау үшін MP Bloqueador қолданбасына пайдаланушы сценарийлерін іске қосуға рұқсат беруіңіз керек.",
     "description": "A notice to inform user that the enforcement of some filters requires permission to execute 'user scripts'"
   },
   "customFiltersImportExportLabel": {
@@ -120,7 +120,7 @@
     "description": "Placeholder text which describes the purpose of the textarea widget"
   },
   "userScriptsInfo": {
-    "message": "Браузеріңіздің кеңейтулер бетін ашыңыз (<code>chrome://extensions</code> Chrome-да немесе <code>about:addons</code> Firefox-та), <b>uBO Lite</b> мәліметтерін ашып, <b>Пайдаланушы скрипттеріне рұқсат ету</b> (сонымен қатар “расталмаған үшінші тарап скрипттері” деп аталады) қосқышын қосыңыз.",
+    "message": "Браузеріңіздің кеңейтулер бетін ашыңыз (<code>chrome://extensions</code> Chrome-да немесе <code>about:addons</code> Firefox-та), <b>MP Bloqueador</b> мәліметтерін ашып, <b>Пайдаланушы скрипттеріне рұқсат ету</b> (сонымен қатар “расталмаған үшінші тарап скрипттері” деп аталады) қосқышын қосыңыз.",
     "description": "A notice to inform user on how to enable 'user scripts' permission"
   },
   "aboutChangelog": {
@@ -192,7 +192,7 @@
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option3": {
-    "message": "uBO Lite-ты анықтайды",
+    "message": "MP Bloqueador-ты анықтайды",
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option4": {
@@ -200,7 +200,7 @@
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option5": {
-    "message": "uBO Lite іске қосылғанда дұрыс жұмыс істемейді",
+    "message": "MP Bloqueador іске қосылғанда дұрыс жұмыс істемейді",
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option6": {
@@ -296,7 +296,7 @@
     "description": "Header for filter-creation section in the dashboard"
   },
   "sandboxEditorUserScriptsInfo": {
-    "message": "Құм жәшігінен косметикалық немесе сценарийлік сүзгілерді қолдану үшін uBO Lite қолданбасына пайдаланушы сценарийлерін іске қосуға рұқсат беруіңіз керек.",
+    "message": "Құм жәшігінен косметикалық немесе сценарийлік сүзгілерді қолдану үшін MP Bloqueador қолданбасына пайдаланушы сценарийлерін іске қосуға рұқсат беруіңіз керек.",
     "description": "A notice to inform user that the enforcement of some filters requires permission to execute 'user scripts'"
   },
   "developerModeLabel": {
@@ -328,7 +328,7 @@
     "description": "Web page title for the strict-blocked page"
   },
   "strictblockSentence1": {
-    "message": "uBO Lite келесі беттің жүктелуіне жол бермеді:",
+    "message": "MP Bloqueador келесі беттің жүктелуіне жол бермеді:",
     "description": "Sentence used in the strict-blocked page"
   },
   "strictblockReasonSentence1": {

@@ -1,6 +1,6 @@
 {
   "extName": {
-    "message": "uBlock Origin Lite",
+    "message": "Melhor Preço Bloqueador",
     "description": "extension name."
   },
   "extShortDesc": {
@@ -12,8 +12,8 @@
     "description": "Appears aside each filter list in the _3rd-party filters_ pane"
   },
   "dashboardName": {
-    "message": "uBO Lite — Πίνακας ελέγχου",
-    "description": "English: uBO Lite — Dashboard"
+    "message": "MP Bloqueador — Πίνακας ελέγχου",
+    "description": "English: MP Bloqueador — Dashboard"
   },
   "settingsPageName": {
     "message": "Ρυθμίσεις",
@@ -108,7 +108,7 @@
     "description": "Placeholder text which describes the purpose of the textarea widget"
   },
   "customListImportUserScriptsInfo": {
-    "message": "Για να επιβάλετε φίλτρα μορφοποίησης ή σεναρίων από εισαγόμενες λίστες, πρέπει να δώσετε άδεια εκτέλεσης σεναρίων χρήστη στο uBO Lite.",
+    "message": "Για να επιβάλετε φίλτρα μορφοποίησης ή σεναρίων από εισαγόμενες λίστες, πρέπει να δώσετε άδεια εκτέλεσης σεναρίων χρήστη στο MP Bloqueador.",
     "description": "A notice to inform user that the enforcement of some filters requires permission to execute 'user scripts'"
   },
   "customFiltersImportExportLabel": {
@@ -120,7 +120,7 @@
     "description": "Placeholder text which describes the purpose of the textarea widget"
   },
   "userScriptsInfo": {
-    "message": "Ανοίξτε τη σελίδα επεκτάσεων του προγράμματος περιήγησής σας (<code>chrome://extensions</code> στο Chrome ή <code>about:addons</code> στον Firefox), ανοίξτε τις λεπτομέρειες του <b>uBO Lite</b> και ενεργοποιήστε την επιλογή <b>Να επιτρέπονται τα user scripts</b> (γνωστά και ως «μη επαληθευμένα σενάρια τρίτων»).",
+    "message": "Ανοίξτε τη σελίδα επεκτάσεων του προγράμματος περιήγησής σας (<code>chrome://extensions</code> στο Chrome ή <code>about:addons</code> στον Firefox), ανοίξτε τις λεπτομέρειες του <b>MP Bloqueador</b> και ενεργοποιήστε την επιλογή <b>Να επιτρέπονται τα user scripts</b> (γνωστά και ως «μη επαληθευμένα σενάρια τρίτων»).",
     "description": "A notice to inform user on how to enable 'user scripts' permission"
   },
   "aboutChangelog": {
@@ -192,7 +192,7 @@
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option3": {
-    "message": "Ανιχνεύει το uBO Lite",
+    "message": "Ανιχνεύει το MP Bloqueador",
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option4": {
@@ -200,7 +200,7 @@
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option5": {
-    "message": "Δυσλειτουργεί όταν είναι ενεργό το uBO Lite",
+    "message": "Δυσλειτουργεί όταν είναι ενεργό το MP Bloqueador",
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option6": {
@@ -296,7 +296,7 @@
     "description": "Header for filter-creation section in the dashboard"
   },
   "sandboxEditorUserScriptsInfo": {
-    "message": "Για να επιβάλετε φίλτρα μορφοποίησης ή σεναρίων από το περιβάλλον προστατευμένης εκτέλεσης, πρέπει να δώσετε άδεια εκτέλεσης σεναρίων χρήστη στο uBO Lite.",
+    "message": "Για να επιβάλετε φίλτρα μορφοποίησης ή σεναρίων από το περιβάλλον προστατευμένης εκτέλεσης, πρέπει να δώσετε άδεια εκτέλεσης σεναρίων χρήστη στο MP Bloqueador.",
     "description": "A notice to inform user that the enforcement of some filters requires permission to execute 'user scripts'"
   },
   "developerModeLabel": {
@@ -328,7 +328,7 @@
     "description": "Web page title for the strict-blocked page"
   },
   "strictblockSentence1": {
-    "message": "Το uBO Lite εμπόδισε τη φόρτωση της παρακάτω σελίδας:",
+    "message": "Το MP Bloqueador εμπόδισε τη φόρτωση της παρακάτω σελίδας:",
     "description": "Sentence used in the strict-blocked page"
   },
   "strictblockReasonSentence1": {

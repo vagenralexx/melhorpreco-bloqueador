@@ -69,6 +69,18 @@
     "homeURL": "https://gitlab.com/malware-filter/urlhaus-filter"
   },
   {
+    "id": "procon-sp",
+    "name": "🇧🇷 Procon-SP: Evite esses sites (lojas com reclamações)",
+    "group": "malware",
+    "enabled": false,
+    "tags": "golpe fraude loja brasil procon",
+    "excludedPlatforms": [ "safari" ],
+    "urls": [
+      "https://sistemas.procon.sp.gov.br/evitesite/list/evitesite.php?action=list"
+    ],
+    "homeURL": "https://sistemas.procon.sp.gov.br/evitesite/list/evitesites.php"
+  },
+  {
     "id": "adguard-mobile",
     "name": "AdGuard/uBO – Mobile Ads",
     "group": "ads",
@@ -556,6 +568,18 @@
       "https://raw.githubusercontent.com/easylist/ruadlist/master/cntblock.txt"
     ],
     "homeURL": "https://forums.lanik.us/viewforum.php?f=102"
+  },
+  {
+    "id": "bra-0",
+    "group": "regions",
+    "lang": "pt",
+    "name": "🇧🇷br 🇵🇹pt: EasyList Portuguese",
+    "tags": "ads portuguese português brasil",
+    "enabled": true,
+    "urls": [
+      "https://easylist-downloads.adblockplus.org/easylistportuguese.txt"
+    ],
+    "homeURL": "https://easylist.to/"
   },
   {
     "id": "spa-0",

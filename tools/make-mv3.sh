@@ -136,6 +136,9 @@ cp platform/mv3/extension/lib/s14e-serializer/s14e-serializer.js \
     "$UBOL_DIR"/lib/
 
 echo "*** uBOLite.mv3: Generating rulesets"
+# Melhor Preco Bloqueador: a lista do Procon-SP vem de um endpoint JSON, entao
+# e convertida antes e gravada no cache que o make-rulesets.js le primeiro
+node tools/make-procon-br.mjs "dist/build/mv3-data/$PLATFORM/procon-sp"
 UBOL_BUILD_DIR=$(mktemp -d)
 mkdir -p "$UBOL_BUILD_DIR"
 ./tools/make-nodejs.sh "$UBOL_BUILD_DIR"
@@ -180,19 +183,17 @@ echo "Extension location: $UBOL_DIR/"
 tmp_manifest=$(mktemp)
 chmod '=rw' "$tmp_manifest"
 if [ -z "$TAGNAME" ]; then
-    TAGNAME="$(jq -r .version "$UBOL_DIR"/manifest.json)"
+    # Melhor Preco Bloqueador: node no lugar de jq (jq nao existe no Git Bash do Windows)
+    TAGNAME="$(node -p "require(process.argv[1]).version" "$UBOL_DIR/manifest.json")"
     # Enable DNR rule debugging
-    jq '.permissions += ["declarativeNetRequestFeedback"]' \
-        "$UBOL_DIR/manifest.json" > "$tmp_manifest" \
-        && mv "$tmp_manifest" "$UBOL_DIR/manifest.json"
+    node -e "const fs=require('fs');const f=process.argv[1];const m=JSON.parse(fs.readFileSync(f,'utf8'));m.permissions.push('declarativeNetRequestFeedback');fs.writeFileSync(f,JSON.stringify(m,null,2)+'\n')" "$UBOL_DIR/manifest.json"
     # Use a different extension id than the official one
     if [ "$PLATFORM" = "firefox" ]; then
         jq '.browser_specific_settings.gecko.id = "uBOLite.dev@raymondhill.net"' "$UBOL_DIR/manifest.json"  > "$tmp_manifest" \
             && mv "$tmp_manifest" "$UBOL_DIR/manifest.json"
     fi
 else
-    jq --arg version "${TAGNAME}" '.version = $version' "$UBOL_DIR/manifest.json"  > "$tmp_manifest" \
-        && mv "$tmp_manifest" "$UBOL_DIR/manifest.json"
+    node -e "const fs=require('fs');const f=process.argv[1];const m=JSON.parse(fs.readFileSync(f,'utf8'));m.version=process.argv[2];fs.writeFileSync(f,JSON.stringify(m,null,2)+'\n')" "$UBOL_DIR/manifest.json" "${TAGNAME}"
     rm -rf "$UBOL_DIR/rulesets/debug"
 fi
 

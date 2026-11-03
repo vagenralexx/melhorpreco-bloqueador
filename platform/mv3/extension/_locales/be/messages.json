@@ -1,6 +1,6 @@
 {
   "extName": {
-    "message": "uBlock Origin Lite",
+    "message": "Melhor Preço Bloqueador",
     "description": "extension name."
   },
   "extShortDesc": {
@@ -12,8 +12,8 @@
     "description": "Appears aside each filter list in the _3rd-party filters_ pane"
   },
   "dashboardName": {
-    "message": "uBO Lite — Панэль кіравання",
-    "description": "English: uBO Lite — Dashboard"
+    "message": "MP Bloqueador — Панэль кіравання",
+    "description": "English: MP Bloqueador — Dashboard"
   },
   "settingsPageName": {
     "message": "Налады",
@@ -108,7 +108,7 @@
     "description": "Placeholder text which describes the purpose of the textarea widget"
   },
   "customListImportUserScriptsInfo": {
-    "message": "Каб прымяніць касметычныя фільтры або скрыптлеты да імпартаваных спісах, вы павінны даць uBO Lite дазвол на запуск карыстацкіх сцэнарыяў.",
+    "message": "Каб прымяніць касметычныя фільтры або скрыптлеты да імпартаваных спісах, вы павінны даць MP Bloqueador дазвол на запуск карыстацкіх сцэнарыяў.",
     "description": "A notice to inform user that the enforcement of some filters requires permission to execute 'user scripts'"
   },
   "customFiltersImportExportLabel": {
@@ -120,7 +120,7 @@
     "description": "Placeholder text which describes the purpose of the textarea widget"
   },
   "userScriptsInfo": {
-    "message": "Адкрыйце старонку пашырэнняў вашага браўзера (<code>chrome://extensions</code> у Chrome або <code>about:addons</code> у Firefox), адкрыйце падрабязнасці <b>uBO Lite</b> і ўключыце <b>Дазволіць карыстальніцкія скрыпты</b> (таксама вядомыя як «неправераныя староннія скрыпты»).",
+    "message": "Адкрыйце старонку пашырэнняў вашага браўзера (<code>chrome://extensions</code> у Chrome або <code>about:addons</code> у Firefox), адкрыйце падрабязнасці <b>MP Bloqueador</b> і ўключыце <b>Дазволіць карыстальніцкія скрыпты</b> (таксама вядомыя як «неправераныя староннія скрыпты»).",
     "description": "A notice to inform user on how to enable 'user scripts' permission"
   },
   "aboutChangelog": {
@@ -192,7 +192,7 @@
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option3": {
-    "message": "Выяўляе uBO Lite",
+    "message": "Выяўляе MP Bloqueador",
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option4": {
@@ -200,7 +200,7 @@
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option5": {
-    "message": "Няспраўнасці пры ўключаным uBO Lite",
+    "message": "Няспраўнасці пры ўключаным MP Bloqueador",
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option6": {
@@ -296,7 +296,7 @@
     "description": "Header for filter-creation section in the dashboard"
   },
   "sandboxEditorUserScriptsInfo": {
-    "message": "Каб прымяніць касметычныя фільтры або скрыптлеты з ізаляванай асяроддзя, вы павінны даць uBO Lite дазвол на запуск карыстацкіх сцэнарыяў.",
+    "message": "Каб прымяніць касметычныя фільтры або скрыптлеты з ізаляванай асяроддзя, вы павінны даць MP Bloqueador дазвол на запуск карыстацкіх сцэнарыяў.",
     "description": "A notice to inform user that the enforcement of some filters requires permission to execute 'user scripts'"
   },
   "developerModeLabel": {
@@ -328,7 +328,7 @@
     "description": "Web page title for the strict-blocked page"
   },
   "strictblockSentence1": {
-    "message": "uBO Lite  папярэдзіў чытанне наступнай старонкі:",
+    "message": "MP Bloqueador  папярэдзіў чытанне наступнай старонкі:",
     "description": "Sentence used in the strict-blocked page"
   },
   "strictblockReasonSentence1": {
