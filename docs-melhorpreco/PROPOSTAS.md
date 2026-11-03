@@ -8,7 +8,7 @@ Fontes: código e testes desta sessão (RELATORIO-VERIFICACAO.md) e a pesquisa d
 2. **Links da aba Sobre** (Política de privacidade, Documentação, Notas de lançamento) ainda levam às páginas do uBOL. Precisam de páginas nossas: a política de privacidade é exigida pela Chrome Web Store.
 3. **Procon-SP por padrão?** Hoje está desligado. Os testes mostraram domínios da lista que já viraram outra coisa (domínio à venda, redirecionamento para site de novelas). Não há licença explícita dos dados.
 4. **Repositório público e Chrome Web Store:** a GPLv3 exige oferecer o código-fonte de cada versão distribuída.
-5. **Tamanho do pacote com as listas DNS:** 38 MB em zip, contra 9 MB sem elas; as listas de apostas e adulto respondem por mais da metade. Opções: (a) manter tudo embutido; (b) publicar duas versões (normal e "Família"); (c) tirar as duas maiores do pacote e oferecê-las como assinatura remota pela função de importar lista da uBOL (precisa ser testada com listas desse tamanho).
+5. **Tamanho do pacote com as listas DNS:** 38 MB em zip, contra 9 MB sem elas; as listas de apostas e adulto respondem por mais da metade. **Decisão do dono (03/11/2026): manter tudo embutido.** As alternativas descartadas foram publicar duas versões ou usar assinatura remota.
 6. **Permissão `webRequest` das estatísticas:** é opcional (só pedida quando o usuário ativa), mas aparece na revisão da Chrome Web Store e precisa estar na política de privacidade ("dados só locais").
 7. **Mensagem de vitrine:** com a extensão, KaBuM! e Americanas perdem os carrosséis "Recomendados para você" da Insider (rastreador bloqueado pelas listas originais). Decidir se liberamos a Insider por padrão (perde privacidade) ou explicamos no popup/FAQ.
 
