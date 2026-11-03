@@ -1,7 +1,7 @@
 [
   {
     "id": "ublock-filters",
-    "name": "uBlock filters – Ads, trackers, and more",
+    "name": "uBlock filters – Anúncios, rastreadores e mais",
     "group": "default",
     "enabled": true,
     "trusted": true,
@@ -36,7 +36,7 @@
   },
   {
     "id": "pgl",
-    "name": "Peter Lowe – Ads, trackers, and more",
+    "name": "Peter Lowe – Anúncios, rastreadores e mais",
     "group": "default",
     "enabled": true,
     "excludedPlatforms": [
@@ -49,7 +49,7 @@
   },
   {
     "id": "ublock-badware",
-    "name": "uBlock filters – Badware risks",
+    "name": "uBlock filters – Sites de risco (badware)",
     "group": "malware",
     "enabled": true,
     "trusted": true,
@@ -63,7 +63,7 @@
   },
   {
     "id": "urlhaus-full",
-    "name": "Malicious URL Blocklist",
+    "name": "URLhaus – Endereços com malware",
     "group": "malware",
     "enabled": true,
     "excludedPlatforms": [
@@ -189,7 +189,6 @@
   {
     "id": "hagezi-gambling",
     "name": "HaGeZi Gambling – Sites de apostas (lista DNS)",
-    "group": "misc",
     "enabled": false,
     "tags": "dns pihole",
     "excludedPlatforms": [
@@ -203,7 +202,6 @@
   {
     "id": "oisd-nsfw",
     "name": "OISD NSFW – Conteúdo adulto (lista DNS)",
-    "group": "misc",
     "enabled": false,
     "tags": "dns pihole",
     "excludedPlatforms": [
@@ -216,7 +214,7 @@
   },
   {
     "id": "adguard-mobile",
-    "name": "AdGuard/uBO – Mobile Ads",
+    "name": "AdGuard/uBO – Anúncios em celulares",
     "group": "ads",
     "enabled": false,
     "tags": "mobile",
@@ -228,7 +226,7 @@
   },
   {
     "id": "block-lan",
-    "name": "Block Outsider Intrusion into LAN",
+    "name": "Bloquear sites tentando acessar sua rede local",
     "group": "privacy",
     "enabled": false,
     "urls": [
@@ -238,7 +236,7 @@
   },
   {
     "id": "adguard-spyware-url",
-    "name": "AdGuard/uBO – URL Tracking Protection",
+    "name": "AdGuard/uBO – Remove rastreadores dos links",
     "group": "privacy",
     "enabled": false,
     "excludedPlatforms": [
@@ -251,7 +249,7 @@
   },
   {
     "id": "annoyances-ai",
-    "name": "EasyList – AI Widgets",
+    "name": "EasyList – Widgets de IA",
     "group": "annoyances",
     "enabled": false,
     "urls": [
@@ -261,7 +259,7 @@
   },
   {
     "id": "annoyances-cookies",
-    "name": "EasyList/uBO – Cookie Notices",
+    "name": "EasyList/uBO – Avisos de cookies",
     "group": "annoyances",
     "enabled": false,
     "urls": [
@@ -272,7 +270,7 @@
   },
   {
     "id": "annoyances-overlays",
-    "name": "EasyList/uBO – Overlay Notices",
+    "name": "EasyList/uBO – Janelas sobrepostas e avisos",
     "group": "annoyances",
     "enabled": false,
     "urls": [
@@ -283,7 +281,7 @@
   },
   {
     "id": "annoyances-social",
-    "name": "EasyList – Social Widgets",
+    "name": "EasyList – Botões de redes sociais",
     "group": "annoyances",
     "enabled": false,
     "urls": [
@@ -293,7 +291,7 @@
   },
   {
     "id": "annoyances-widgets",
-    "name": "EasyList – Chat Widgets",
+    "name": "EasyList – Widgets de chat",
     "group": "annoyances",
     "enabled": false,
     "urls": [
@@ -303,7 +301,7 @@
   },
   {
     "id": "annoyances-others",
-    "name": "EasyList – Other Annoyances",
+    "name": "EasyList – Outros incômodos",
     "group": "annoyances",
     "enabled": false,
     "urls": [
@@ -313,7 +311,7 @@
   },
   {
     "id": "annoyances-notifications",
-    "name": "EasyList – Notifications",
+    "name": "EasyList – Pedidos de notificação",
     "group": "annoyances",
     "enabled": false,
     "urls": [
@@ -333,7 +331,7 @@
   },
   {
     "id": "ubol-tests",
-    "name": "uBO Lite Test Filters",
+    "name": "Filtros de teste do uBO Lite",
     "enabled": false,
     "trusted": true,
     "urls": [

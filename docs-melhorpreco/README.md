@@ -32,6 +32,7 @@ Bloqueador de anúncios, rastreadores e sites perigosos para Google Chrome (Mani
 | 9 listas no estilo Pi-hole (listas DNS), opcionais: HaGeZi PRO, ULTIMATE, Threat Intelligence, Fake, Pop-Up Ads e Gambling; OISD Big e NSFW; StevenBlack | `platform/mv3/rulesets.json` |
 | **Modos de proteção** (Leve, Recomendado, Máximo, Família): um clique liga a combinação de listas; listas regionais e importadas são mantidas | `platform/mv3/extension/js/mp-presets.js`, `dashboard.html`, `css/mp.css` |
 | Ícone novo da família Melhor Preço (gerado no GPT a partir de `PROMPT-ICONE-GPT.md`), com versões pausadas em cinza | `platform/mv3/extension/img/icon_*.png` |
+| Abas Configurações e Listas de filtros redesenhadas (cartões, linhas com descrição, busca, grupos em cartões) e nomes das listas em português | `css/mp.css`, `rulesets.json` |
 | Painel redesenhado: cabeçalho com marca e selo do modo atual, tema escuro azul-marinho, cartões de modo com ícones (Lucide, ISC) | `css/mp.css`, `dashboard.html` |
 | **Estatísticas** estilo Pi-hole (aba própria): cartões com variação contra o período anterior e minigráfico de 14 dias, barras por hora/dia com pico e média, rosca por tipo, mapa de calor dia × hora (30 dias), resumo do período e rankings: bloqueios por hora/dia, domínios mais bloqueados, sites, tipos e páginas barradas. Usa a permissão **opcional** `webRequest`, pedida só quando o usuário ativa; dados só locais, por até 30 dias | `platform/mv3/extension/js/mp-stats*.js`, `chromium/manifest.json` |
 

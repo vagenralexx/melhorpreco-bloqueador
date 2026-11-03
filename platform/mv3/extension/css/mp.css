@@ -853,3 +853,230 @@ circle.mpDonutSlice { background-color: transparent; }
         transition: none;
     }
 }
+
+/* ---------- Settings pane ---------- */
+
+section[data-pane="settings"] {
+    padding-bottom: 32px;
+    }
+section[data-pane="settings"] > div {
+    background-color: var(--mp-card);
+    border: 1px solid var(--mp-border);
+    border-radius: var(--mp-radius);
+    box-shadow: var(--mp-glow);
+    margin: 16px 0;
+    padding: 4px 20px 16px;
+    }
+section[data-pane="settings"] > div > h3 {
+    color: var(--mp-ink);
+    font-size: 115%;
+    margin: 16px 0 8px;
+    }
+section[data-pane="settings"] > div > p[data-i18n] {
+    color: var(--mp-ink-2);
+    line-height: 1.5;
+    margin-top: 0;
+    }
+
+/* Filtering mode cards */
+#defaultFilteringMode {
+    gap: 12px;
+    }
+.filteringModeCard {
+    background-color: var(--mp-card-2);
+    border: 1px solid var(--mp-border);
+    border-radius: 12px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: border-color 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+    }
+.filteringModeCard:hover {
+    background-color: var(--mp-card-2);
+    border-color: var(--mp-accent);
+    }
+.filteringModeCard:has(.radio > [type="radio"]:checked) {
+    background-color: var(--mp-accent-soft);
+    border-color: var(--mp-accent);
+    box-shadow: var(--mp-glow-strong);
+    }
+.filteringModeCard:has(.radio > [type="radio"]:focus-visible) {
+    outline: 2px solid var(--mp-accent);
+    outline-offset: 2px;
+    }
+.filteringModeCard > div {
+    padding: 10px 12px;
+    }
+.filteringModeCard > div:first-of-type {
+    font-weight: 700;
+    }
+.filteringModeCard > div:nth-of-type(2) {
+    padding-bottom: 14px;
+    }
+.filteringModeCard > div:nth-of-type(3) {
+    border-top: 1px solid var(--mp-border);
+    color: var(--mp-ink-2);
+    line-height: 1.45;
+    }
+.filteringModeCard:has(.radio > [type="radio"]:checked) > div:nth-of-type(3) {
+    color: var(--mp-ink);
+    }
+.filteringModeSlider span[data-level] {
+    border-radius: 2px;
+    }
+@media (max-width: 640px) {
+    #defaultFilteringMode {
+        grid: auto-flow dense / 1fr;
+    }
+}
+
+/* Behavior: one row per option, label then explanation */
+section[data-pane="settings"] > div > p:has(> label > .checkbox) {
+    border-top: 1px solid var(--mp-border);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 0;
+    padding: 12px 0;
+    }
+section[data-pane="settings"] > div > h3 + p:has(> label > .checkbox) {
+    border-top: 0;
+    }
+section[data-pane="settings"] > div > p > label:has(> .checkbox) {
+    color: var(--mp-ink);
+    cursor: pointer;
+    font-weight: 600;
+    }
+section[data-pane="settings"] > div > p > legend {
+    color: var(--mp-ink-2);
+    font-size: 90%;
+    line-height: 1.45;
+    }
+
+/* Backup buttons */
+section[data-pane="settings"] p:has(button) {
+    gap: 8px;
+    }
+section[data-pane="settings"] button.iconified {
+    background-color: var(--mp-card-2);
+    border: 1px solid var(--mp-border);
+    border-radius: 10px;
+    color: var(--mp-ink);
+    fill: var(--mp-ink);
+    font-weight: 600;
+    min-height: 40px;
+    padding: 0 14px;
+    }
+section[data-pane="settings"] button.iconified:hover {
+    border-color: var(--mp-accent);
+    }
+section[data-pane="settings"] button.iconified .fa-icon {
+    color: var(--mp-accent);
+    fill: var(--mp-accent);
+    }
+
+/* ---------- Filter lists pane ---------- */
+
+#listsOfBlockedHostsPrompt {
+    color: var(--mp-ink);
+    font-weight: 600;
+    }
+header [data-pane-related="rulesets"] > p:has(#listsOfBlockedHostsPrompt) {
+    align-items: center;
+    background-color: var(--mp-accent-soft);
+    border: 1px solid var(--mp-border);
+    border-radius: 10px;
+    display: flex;
+    gap: 8px;
+    margin: 0 0 12px;
+    padding: 10px 14px;
+    }
+#findInLists {
+    background-color: var(--mp-card);
+    border: 1px solid var(--mp-border);
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: var(--mp-ink);
+    font-size: 100%;
+    min-height: 40px;
+    padding: 0 14px;
+    width: 100%;
+    }
+#findInLists::placeholder {
+    color: var(--mp-ink-3);
+    }
+#findInLists:focus-visible {
+    border-color: var(--mp-accent);
+    outline: 2px solid var(--mp-accent);
+    outline-offset: 1px;
+    }
+
+/* Each group is a card */
+#lists > .listEntries > .listEntry[data-role="rootnode"] {
+    background-color: var(--mp-card);
+    border: 1px solid var(--mp-border);
+    border-radius: var(--mp-radius);
+    box-shadow: var(--mp-glow);
+    margin: 0 0 12px;
+    padding: 4px 8px 6px;
+    }
+#lists .listEntry[data-role="rootnode"] > .detailbar {
+    cursor: pointer;
+    padding: 8px 6px;
+    }
+#lists .listEntry[data-role="rootnode"] > .detailbar h3 {
+    color: var(--mp-ink);
+    font-size: 105%;
+    }
+#lists .listEntry[data-role="rootnode"] > .detailbar .count {
+    background-color: var(--mp-accent-soft);
+    border-radius: 999px;
+    color: var(--mp-ink);
+    font-size: 80%;
+    font-weight: 600;
+    padding: 1px 8px;
+    }
+#lists .listEntry[data-role="rootnode"] > .listEntries {
+    padding-bottom: 2px;
+    }
+#lists .listEntry[data-role="leaf"] > .detailbar,
+#lists .listEntry[data-role="node"] > .detailbar {
+    border-radius: 8px;
+    display: flex;
+    margin: 1px 0;
+    padding: 6px 6px;
+    white-space: normal;
+    }
+#lists .listEntry[data-role="leaf"] > .detailbar:hover,
+#lists .listEntry[data-role="node"] > .detailbar:hover {
+    background-color: var(--mp-card-2);
+    }
+#lists .listEntry .detailbar label {
+    align-items: center;
+    cursor: pointer;
+    display: inline-flex;
+    flex: 1;
+    min-width: 0;
+    }
+#lists .listEntry .listname {
+    color: var(--mp-ink);
+    }
+#lists .listEntry[data-role="leaf"] .iconbar .fa-icon {
+    color: var(--mp-ink-3);
+    fill: var(--mp-ink-3);
+    }
+#lists .listEntry[data-role="leaf"] .iconbar .fa-icon:hover {
+    color: var(--mp-accent);
+    fill: var(--mp-accent);
+    }
+#lists .listEntry[data-role="leaf"]:has(> .detailbar input:checked) .listname {
+    font-weight: 600;
+    }
+
+/* Narrow windows: same side gutter as the header */
+@media (max-width: 800px) {
+    body > section:not([data-pane="stats"]) {
+        box-sizing: border-box;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
