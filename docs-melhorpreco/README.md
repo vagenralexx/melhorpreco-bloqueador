@@ -28,8 +28,9 @@ Bloqueador de anúncios, rastreadores e sites perigosos para Google Chrome (Mani
 | Nova lista **EasyList Portuguese** (`bra-0`), ligada por padrão para todos | `platform/mv3/rulesets.json` |
 | Nova lista **Procon-SP "Evite esses Sites"** (`procon-sp`), opcional (desligada), gerada do endpoint oficial a cada build | `platform/mv3/rulesets.json`, `tools/make-procon-br.mjs` |
 | Build roda no Git Bash do Windows (troca de `jq` por `node`) | `tools/make-mv3.sh` |
+| Correção: o bloqueio estrito (página de aviso) da URLhaus e do Procon era descartado pelo teto de regex; listas de domínios agora têm prioridade | `platform/mv3/extension/js/ruleset-manager.js` |
 
-Licenças de cada lista: [LICENCAS-LISTAS.md](LICENCAS-LISTAS.md). Orçamento de regras do Chrome: [ORCAMENTO-REGRAS.md](ORCAMENTO-REGRAS.md). Prova ao vivo: [RELATORIO-VERIFICACAO.md](RELATORIO-VERIFICACAO.md).
+Licenças de cada lista: [LICENCAS-LISTAS.md](LICENCAS-LISTAS.md). Orçamento de regras do Chrome: [ORCAMENTO-REGRAS.md](ORCAMENTO-REGRAS.md). Prova ao vivo: [RELATORIO-VERIFICACAO.md](RELATORIO-VERIFICACAO.md). Lacunas e melhorias: [PROPOSTAS.md](PROPOSTAS.md).
 
 ## Como compilar (Windows)
 

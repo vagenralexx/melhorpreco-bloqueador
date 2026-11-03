@@ -308,6 +308,13 @@ async function updateStrictBlockRules(currentRules, addRules, removeRuleIds) {
         }
     }
 
+    // Melhor Preço Bloqueador: rules which are lists of domains come first,
+    // so that the regex budget (MAX_NUMBER_OF_REGEX_RULES) is not exhausted
+    // by pattern-based rules before whole rulesets such as urlhaus-full or
+    // procon-sp get a chance to be registered (see updateSessionRules()).
+    const isDomainList = rule => rule.condition.regexFilter === '^https?://.*';
+    allRules.sort((a, b) => Number(isDomainList(b)) - Number(isDomainList(a)));
+
     const validRules = await pruneInvalidRegexRules('strictblock', allRules);
     if ( validRules.length === 0 ) { return; }
     ubolLog(`Add ${validRules.length} DNR strictblock rules`);

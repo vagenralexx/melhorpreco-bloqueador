@@ -29,3 +29,5 @@ Conferido em 03/11/2026.
 | glauberlima/procon-blocklist (MIT) | Mesma fonte do Procon, mas parou de atualizar em 31/10/2025 e tem entradas com espaço. Preferimos gerar direto do endpoint oficial. |
 | ialexsilva/anti-clutter (GPLv3) | Sem commits desde 21/02/2024. |
 | edgard/paywall-filters-br | Contorna paywall de jornais: risco jurídico e de política da Chrome Web Store. |
+| eyeo ABP Anti-CV "portuguese.txt" (GPLv3) | Usa a sintaxe de snippets do Adblock Plus (`#$#`), que a uBOL não interpreta; quase nada viraria regra. |
+| EasyList Brasil (CC BY-SA 4.0) | Última atualização em 04/09/2021. |

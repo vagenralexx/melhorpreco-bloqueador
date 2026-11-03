@@ -1,0 +1,28 @@
+{
+ "id": "mgkakfoihjfbbjdnefiaamheadaflhdh",
+ "proconChecked": true,
+ "enabledAfterProcon": [
+  "ublock-filters",
+  "easylist",
+  "easyprivacy",
+  "pgl",
+  "ublock-badware",
+  "urlhaus-full",
+  "bra-0",
+  "spa-1",
+  "procon-sp"
+ ],
+ "dynamicRules": 187,
+ "sessionRules": 762,
+ "www.123importados.com": {
+  "finalUrl": "chrome-extension://mgkakfoihjfbbjdnefiaamheadaflhdh/strictblock.html#https://www.123importados.com/",
+  "err": null,
+  "text": "O MP Bloqueador impediu o carregamento da seguinte página:\n\nhttps://www.123importados.com/\n\nA página foi bloqueada devido a um filtro correspondente em Procon-SP: Evite esses sites (lojas com reclamações).\nNão me avise de novo sobre este site\nVoltar\nProsseguir"
+ },
+ "laserfast.com": {
+  "finalUrl": "chrome-extension://mgkakfoihjfbbjdnefiaamheadaflhdh/strictblock.html#https://laserfast.com/",
+  "err": null,
+  "text": "O MP Bloqueador impediu o carregamento da seguinte página:\n\nhttps://laserfast.com/\n\nA página foi bloqueada devido a um filtro correspondente em Procon-SP: Evite esses sites (lojas com reclamações).\nNão me avise de novo sobre este site\nVoltar\nProsseguir"
+ },
+ "scrollOverflow": false
+}

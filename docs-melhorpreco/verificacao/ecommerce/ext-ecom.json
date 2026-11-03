@@ -1,0 +1,126 @@
+{
+ "extInfo": {
+  "id": "mgkakfoihjfbbjdnefiaamheadaflhdh",
+  "enabledRulesets": [
+   "ublock-filters",
+   "easylist",
+   "easyprivacy",
+   "pgl",
+   "ublock-badware",
+   "urlhaus-full",
+   "bra-0",
+   "spa-1"
+  ],
+  "availableStaticRuleCount": 309978,
+  "manifest": {
+   "name": "Melhor Preço Bloqueador",
+   "version": "2026.1103.1525"
+  },
+  "matchedByRuleset": {
+   "ublock-filters": 26,
+   "easyprivacy": 56,
+   "pgl": 1,
+   "easylist": 4
+  }
+ },
+ "results": [
+  {
+   "url": "https://www.mercadolivre.com.br/",
+   "requests": 339,
+   "blocked": 49,
+   "failedOther": 0,
+   "blockedHosts": {
+    "print1.mercadoclics.com": 43,
+    "static.hotjar.com": 1,
+    "matt.mercadolivre.com.br": 1,
+    "melidata.mercadolibre.com": 1,
+    "melidata.mercadolivre.com": 1,
+    "melidata.mercadopago.com": 1,
+    "melidata.mercadopago.com.br": 1
+   },
+   "consoleErrors": 242,
+   "status": 200,
+   "loadMs": 7604,
+   "title": "Mercado Livre Brasil - Frete Grátis no mesmo dia",
+   "textLen": 25870,
+   "prices": 276,
+   "links": 393,
+   "imgsVisible": 129,
+   "iframes": 16
+  },
+  {
+   "url": "https://lista.mercadolivre.com.br/radio-am-fm",
+   "requests": 84,
+   "blocked": 3,
+   "failedOther": 2,
+   "blockedHosts": {
+    "matt.mercadolivre.com.br": 1,
+    "api.mercadolibre.com": 2
+   },
+   "consoleErrors": 3,
+   "status": 200,
+   "loadMs": 7363,
+   "title": "Segurança — Mercado Livre",
+   "textLen": 419,
+   "prices": 0,
+   "links": 6,
+   "imgsVisible": 0,
+   "iframes": 3
+  },
+  {
+   "url": "https://www.americanas.com.br/",
+   "requests": 238,
+   "blocked": 2,
+   "failedOther": 0,
+   "blockedHosts": {
+    "activity-flow.vtex.com": 1,
+    "americanas.api.useinsider.com": 1
+   },
+   "consoleErrors": 2,
+   "status": 200,
+   "loadMs": 6734,
+   "title": "Americanas - Tudo que você ama | Americanas",
+   "textLen": 6164,
+   "prices": 57,
+   "links": 208,
+   "imgsVisible": 82,
+   "iframes": 1
+  },
+  {
+   "url": "https://www.americanas.com.br/busca/radio",
+   "requests": 127,
+   "blocked": 3,
+   "failedOther": 0,
+   "blockedHosts": {
+    "activity-flow.vtex.com": 1,
+    "americanas.api.useinsider.com": 1,
+    "sp.vtex.com": 1
+   },
+   "consoleErrors": 3,
+   "status": 200,
+   "loadMs": 6359,
+   "title": "radio em promoção nas Americanas",
+   "textLen": 3543,
+   "prices": 23,
+   "links": 80,
+   "imgsVisible": 22,
+   "iframes": 1
+  },
+  {
+   "url": "https://www.casasbahia.com.br/radio/b",
+   "requests": 6,
+   "blocked": 0,
+   "failedOther": 0,
+   "blockedHosts": {},
+   "consoleErrors": 7,
+   "status": 403,
+   "loadMs": 6332,
+   "title": "",
+   "textLen": 500,
+   "prices": 0,
+   "links": 6,
+   "imgsVisible": 0,
+   "iframes": 0
+  }
+ ]
+}

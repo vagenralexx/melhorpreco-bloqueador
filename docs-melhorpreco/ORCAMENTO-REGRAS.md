@@ -17,10 +17,21 @@ Fonte: documentação oficial, conferida em 03/11/2026:
 
 ## O que isso significa para nós
 
-- O uBOL oficial, só com os rulesets padrão, já passa dos 30.000 garantidos e usa parte da reserva global. Se o usuário tiver outro bloqueador grande instalado, a reserva global pode acabar e alguns rulesets não ligam. O painel do uBOL avisa quando isso acontece.
-- A EasyList Portuguese é pequena (~1.700 linhas no arquivo, das quais só parte vira regra de rede) e o Procon-SP tem 81 domínios: o acréscimo é pequeno.
+- Medido no build: com a configuração padrão de um usuário brasileiro (6 rulesets do uBOL + `bra-0` + `spa-1`) e o Procon ligado, o painel mostra **20.290 regras**. Fica abaixo das 30.000 garantidas, então não dependemos da reserva global, mesmo com outro bloqueador instalado. A uBOL compacta listas de domínios: a lista inteira do Peter Lowe vira 1 regra com milhares de domínios.
+- A EasyList Portuguese acrescenta 245 regras e o Procon-SP 1. Folga para ligar mais listas: cerca de 9.700 regras dentro do garantido.
+- **Teto que importa de verdade: regex.** As regras de bloqueio estrito (página de aviso) são regras de sessão com regex e disputam o limite de 1.000 (a uBOL usa até 950). A uBOL oficial estoura esse teto com o `ublock-badware` e descarta as listas seguintes. No fork, as listas de domínios passaram a ter prioridade (ver RELATORIO-VERIFICACAO.md, item 4).
 - Somos 58 rulesets declarados (o uBOL tem 56 + nossos 2); continuamos abaixo de 100. Ligados por padrão: 7 (6 do uBOL + `bra-0`), mais `spa-1` quando o navegador está em português.
 
-## Contagem por ruleset
+## Contagem por ruleset (build 2026.1103.1545, regras DNR)
 
-PENDENTE: sai do `log.txt` do build. Ver [RELATORIO-VERIFICACAO.md](RELATORIO-VERIFICACAO.md).
+| Ruleset | Padrão | Regras | Regex | Bloqueio estrito |
+|---|---|---|---|---|
+| ublock-filters | ligado | 5.820 | 210 | 50 |
+| easylist | ligado | 3.736 | 18 | 21 |
+| easyprivacy | ligado | 9.087 | 7 | 1 |
+| pgl | ligado | 1 (lista de domínios) | 0 | 1 |
+| ublock-badware | ligado | 455 | 22 | 1.055 |
+| urlhaus-full | ligado | 1 (lista de domínios) | 0 | 1 |
+| bra-0 (novo) | ligado | 245 | 3 | 1 |
+| spa-1 | ligado se o navegador estiver em português | 944 | 7 | 2 |
+| procon-sp (novo) | desligado | 1 (lista de domínios) | 0 | 1 |

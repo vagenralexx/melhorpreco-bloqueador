@@ -70,7 +70,7 @@
   },
   {
     "id": "procon-sp",
-    "name": "🇧🇷 Procon-SP: Evite esses sites (lojas com reclamações)",
+    "name": "Procon-SP: Evite esses sites (lojas com reclamações)",
     "group": "malware",
     "enabled": false,
     "tags": "golpe fraude loja brasil procon",
