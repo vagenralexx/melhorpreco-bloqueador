@@ -25,23 +25,24 @@
 <!-- -------- -->
 <header>
     <nav id="dashboard-nav">
-        <span class="logo"><img data-i18n-title="extName" src="img/mp-bloqueador.svg" alt="MP Bloqueador"></span><!--
+        <span class="logo"><img data-i18n-title="extName" src="img/icon_64.png" alt="MP Bloqueador"><span class="mpNavBrand">MP Bloqueador</span></span><!--
      --><button class="tabButton" type="button" data-pane="settings" data-i18n="settingsPageName" tabindex="0"></button><!--
      --><button class="tabButton" type="button" data-pane="rulesets" data-i18n="aboutFilterLists" tabindex="0"></button><!--
      --><button class="tabButton" type="button" data-pane="filters" data-i18n="customFiltersPageName"tabindex="0"></button><!--
      --><button class="tabButton" type="button" data-pane="stats" data-i18n="mpStatsPageName" tabindex="0"></button><!--
      --><button class="tabButton" type="button" data-pane="develop" data-i18n="developPageName"tabindex="0"></button><!--
-     --><button class="tabButton" type="button" data-pane="about" data-i18n="aboutPageName" tabindex="0"></button>
+     --><button class="tabButton" type="button" data-pane="about" data-i18n="aboutPageName" tabindex="0"></button><!--
+     --><span id="mpModeBadge" class="mpModeBadge" data-preset=""><svg class="mpIcon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg><span><span data-i18n="mpStatsModeLabel">_</span>: <strong id="mpModeBadgeName"></strong></span></span>
     </nav>
     <!-- -------- -->
     <div data-pane-related="rulesets">
         <fieldset id="mpPresets">
             <legend data-i18n="mpPresetsLabel">_</legend>
             <div class="mpPresetButtons">
-                <button type="button" data-preset="leve" aria-pressed="false"><span class="mpPresetName" data-i18n="mpPresetLeve">_</span><span class="mpPresetDesc" data-i18n="mpPresetLeveDesc">_</span></button>
-                <button type="button" data-preset="recomendado" aria-pressed="false"><span class="mpPresetName" data-i18n="mpPresetRecomendado">_</span><span class="mpPresetDesc" data-i18n="mpPresetRecomendadoDesc">_</span></button>
-                <button type="button" data-preset="maximo" aria-pressed="false"><span class="mpPresetName" data-i18n="mpPresetMaximo">_</span><span class="mpPresetDesc" data-i18n="mpPresetMaximoDesc">_</span></button>
-                <button type="button" data-preset="familia" aria-pressed="false"><span class="mpPresetName" data-i18n="mpPresetFamilia">_</span><span class="mpPresetDesc" data-i18n="mpPresetFamiliaDesc">_</span></button>
+                <button type="button" data-preset="leve" aria-pressed="false"><svg class="mpIcon mpPresetIcon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.67 19a2 2 0 0 0 1.416-.588l6.154-6.172a6 6 0 0 0-8.49-8.49L5.586 9.914A2 2 0 0 0 5 11.328V18a1 1 0 0 0 1 1z"/><path d="M16 8 2 22"/><path d="M17.5 15H9"/></svg><span class="mpPresetName" data-i18n="mpPresetLeve">_</span><span class="mpPresetDesc" data-i18n="mpPresetLeveDesc">_</span></button>
+                <button type="button" data-preset="recomendado" aria-pressed="false"><svg class="mpIcon mpPresetIcon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg><span class="mpPresetName" data-i18n="mpPresetRecomendado">_</span><span class="mpPresetDesc" data-i18n="mpPresetRecomendadoDesc">_</span></button>
+                <button type="button" data-preset="maximo" aria-pressed="false"><svg class="mpIcon mpPresetIcon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg><span class="mpPresetName" data-i18n="mpPresetMaximo">_</span><span class="mpPresetDesc" data-i18n="mpPresetMaximoDesc">_</span></button>
+                <button type="button" data-preset="familia" aria-pressed="false"><svg class="mpIcon mpPresetIcon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span class="mpPresetName" data-i18n="mpPresetFamilia">_</span><span class="mpPresetDesc" data-i18n="mpPresetFamiliaDesc">_</span></button>
             </div>
             <p class="mpPresetHelp"><span data-i18n="mpPresetCurrent">_</span> <strong id="mpPresetCurrent"></strong>. <span data-i18n="mpPresetsHelp">_</span></p>
         </fieldset>
@@ -140,47 +141,108 @@
 
 <!-- -------- -->
 <section data-pane="stats">
-    <div id="mpStatsOff" hidden>
-        <h3 data-i18n="mpStatsOffTitle">_</h3>
-        <p data-i18n="mpStatsOffBody">_</p>
-        <p><button type="button" id="mpStatsEnable" class="preferred" data-i18n="mpStatsEnable">_</button></p>
-        <p id="mpStatsDenied" class="mpStatsWarn" role="status" hidden data-i18n="mpStatsDenied">_</p>
+    <div id="mpStatsOff" class="mpCard mpStatsOffCard" hidden>
+        <img src="img/icon_128.png" alt="" width="72" height="72">
+        <div>
+            <h3 data-i18n="mpStatsOffTitle">_</h3>
+            <p data-i18n="mpStatsOffBody">_</p>
+            <p><button type="button" id="mpStatsEnable" class="mpBtn mpBtnPrimary" data-i18n="mpStatsEnable">_</button></p>
+            <p id="mpStatsDenied" class="mpStatsWarn" role="status" hidden data-i18n="mpStatsDenied">_</p>
+        </div>
     </div>
     <div id="mpStatsOn" hidden>
-        <div class="mpStatsRange" role="radiogroup">
-            <label><input type="radio" name="mpRange" value="1" checked><span data-i18n="mpStatsRangeToday">_</span></label>
-            <label><input type="radio" name="mpRange" value="7"><span data-i18n="mpStatsRange7">_</span></label>
-            <label><input type="radio" name="mpRange" value="30"><span data-i18n="mpStatsRange30">_</span></label>
+        <div class="mpToolbar">
+            <h2 data-i18n="mpStatsDashTitle">_</h2>
+            <div class="mpSegmented" role="radiogroup">
+                <label><input type="radio" name="mpRange" value="1" checked><span data-i18n="mpStatsRangeToday">_</span></label>
+                <label><input type="radio" name="mpRange" value="7"><span data-i18n="mpStatsRange7">_</span></label>
+                <label><input type="radio" name="mpRange" value="30"><span data-i18n="mpStatsRange30">_</span></label>
+            </div>
         </div>
-        <div class="mpStatsTiles">
-            <div class="mpTile"><span class="mpTileValue" id="mpTileBlocked">0</span><span class="mpTileLabel" data-i18n="mpStatsTileBlocked">_</span></div>
-            <div class="mpTile"><span class="mpTileValue" id="mpTileStrict">0</span><span class="mpTileLabel" data-i18n="mpStatsTileStrict">_</span></div>
-            <div class="mpTile"><span class="mpTileValue" id="mpTileDomains">0</span><span class="mpTileLabel" data-i18n="mpStatsTileDomains">_</span></div>
-            <div class="mpTile"><span class="mpTileValue" id="mpTileSites">0</span><span class="mpTileLabel" data-i18n="mpStatsTileSites">_</span></div>
+        <div class="mpGrid">
+            <article class="mpCard mpHero">
+                <img src="img/icon_128.png" alt="" width="64" height="64">
+                <div class="mpHeroBody">
+                    <span class="mpEyebrow" data-i18n="mpStatsProtection">_</span>
+                    <strong class="mpHeroMode" id="mpHeroMode">_</strong>
+                    <span class="mpHeroMeta" id="mpHeroMeta"></span>
+                </div>
+            </article>
+            <article class="mpCard mpKpi" data-kpi="blocked">
+                <div class="mpKpiHead"><svg class="mpIcon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/></svg><span data-i18n="mpStatsTileBlocked">_</span></div>
+                <strong class="mpKpiValue" id="mpTileBlocked">0</strong>
+                <span class="mpKpiDelta" id="mpDeltaBlocked"></span>
+                <svg class="mpSpark" id="mpSparkBlocked" viewBox="0 0 100 28" preserveAspectRatio="none" aria-hidden="true"></svg>
+            </article>
+            <article class="mpCard mpKpi" data-kpi="strict">
+                <div class="mpKpiHead"><svg class="mpIcon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16h.01"/><path d="M12 8v4"/><path d="M15.312 2a2 2 0 0 1 1.414.586l4.688 4.688A2 2 0 0 1 22 8.688v6.624a2 2 0 0 1-.586 1.414l-4.688 4.688a2 2 0 0 1-1.414.586H8.688a2 2 0 0 1-1.414-.586l-4.688-4.688A2 2 0 0 1 2 15.312V8.688a2 2 0 0 1 .586-1.414l4.688-4.688A2 2 0 0 1 8.688 2z"/></svg><span data-i18n="mpStatsTileStrict">_</span></div>
+                <strong class="mpKpiValue" id="mpTileStrict">0</strong>
+                <span class="mpKpiDelta" id="mpDeltaStrict"></span>
+                <svg class="mpSpark" id="mpSparkStrict" viewBox="0 0 100 28" preserveAspectRatio="none" aria-hidden="true"></svg>
+            </article>
+            <article class="mpCard mpKpi" data-kpi="domains">
+                <div class="mpKpiHead"><svg class="mpIcon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg><span data-i18n="mpStatsTileDomains">_</span></div>
+                <strong class="mpKpiValue" id="mpTileDomains">0</strong>
+                <span class="mpKpiDelta" id="mpDeltaDomains"></span>
+                <svg class="mpSpark" id="mpSparkDomains" viewBox="0 0 100 28" preserveAspectRatio="none" aria-hidden="true"></svg>
+            </article>
+            <article class="mpCard mpKpi" data-kpi="sites">
+                <div class="mpKpiHead"><svg class="mpIcon" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg><span data-i18n="mpStatsTileSites">_</span></div>
+                <strong class="mpKpiValue" id="mpTileSites">0</strong>
+                <span class="mpKpiDelta" id="mpDeltaSites"></span>
+                <svg class="mpSpark" id="mpSparkSites" viewBox="0 0 100 28" preserveAspectRatio="none" aria-hidden="true"></svg>
+            </article>
+
+            <figure class="mpCard mpChart mpSpan8">
+                <figcaption>
+                    <span id="mpChartTitle"></span>
+                    <span class="mpChartPeak" id="mpChartPeak"></span>
+                </figcaption>
+                <div class="mpChartPlot">
+                    <div class="mpChartAxis"><span id="mpChartMax">0</span><span>0</span></div>
+                    <div class="mpChartBars" id="mpChartBars"></div>
+                    <div class="mpTooltip" id="mpTooltip" role="tooltip" hidden></div>
+                </div>
+                <div class="mpChartXAxis" id="mpChartXAxis"></div>
+                <details class="mpChartTable"><summary data-i18n="mpStatsShowTable">_</summary>
+                    <table><thead><tr><th data-i18n="mpStatsColPeriod">_</th><th data-i18n="mpStatsColBlocked">_</th></tr></thead><tbody id="mpChartTableBody"></tbody></table>
+                </details>
+            </figure>
+            <section class="mpCard mpDonutCard mpSpan4">
+                <h3 data-i18n="mpStatsByType">_</h3>
+                <div class="mpDonutWrap">
+                    <svg class="mpDonut" id="mpDonut" viewBox="0 0 120 120" role="img"></svg>
+                    <div class="mpDonutCenter"><strong id="mpDonutTotal">0</strong><span data-i18n="mpStatsDonutUnit">_</span></div>
+                </div>
+                <ul class="mpLegend" id="mpTopTypes"></ul>
+            </section>
+
+            <section class="mpCard mpSpan8">
+                <h3><span data-i18n="mpStatsHeatTitle">_</span></h3>
+                <div class="mpHeat" id="mpHeat" role="img"></div>
+                <div class="mpHeatLegend"><span>0</span><span class="mpHeatRamp" aria-hidden="true"></span><span id="mpHeatMax">0</span></div>
+            </section>
+            <section class="mpCard mpSpan4 mpSummary">
+                <h3 data-i18n="mpStatsSummary">_</h3>
+                <dl>
+                    <dt data-i18n="mpStatsPeakHour">_</dt><dd id="mpSumPeakHour">—</dd>
+                    <dt data-i18n="mpStatsBusiestDay">_</dt><dd id="mpSumBusiestDay">—</dd>
+                    <dt data-i18n="mpStatsDailyAvg">_</dt><dd id="mpSumDailyAvg">—</dd>
+                    <dt data-i18n="mpStatsTopTarget">_</dt><dd id="mpSumTopDomain">—</dd>
+                </dl>
+            </section>
+
+            <section class="mpCard mpRank mpSpan6"><h3 data-i18n="mpStatsTopDomains">_</h3><ol id="mpTopDomains"></ol></section>
+            <section class="mpCard mpRank mpSpan6"><h3 data-i18n="mpStatsTopSites">_</h3><ol id="mpTopSites"></ol></section>
         </div>
         <p id="mpStatsEmpty" class="mpStatsMuted" hidden data-i18n="mpStatsEmpty">_</p>
-        <figure class="mpChart">
-            <figcaption id="mpChartTitle"></figcaption>
-            <div class="mpChartPlot">
-                <div class="mpChartAxis"><span id="mpChartMax">0</span><span>0</span></div>
-                <div class="mpChartBars" id="mpChartBars"></div>
-                <div class="mpTooltip" id="mpTooltip" role="tooltip" hidden></div>
-            </div>
-            <div class="mpChartXAxis" id="mpChartXAxis"></div>
-            <details class="mpChartTable"><summary data-i18n="mpStatsShowTable">_</summary>
-                <table><thead><tr><th data-i18n="mpStatsColPeriod">_</th><th data-i18n="mpStatsColBlocked">_</th></tr></thead><tbody id="mpChartTableBody"></tbody></table>
-            </details>
-        </figure>
-        <div class="mpStatsRanks">
-            <section class="mpRank"><h3 data-i18n="mpStatsTopDomains">_</h3><ol id="mpTopDomains"></ol></section>
-            <section class="mpRank"><h3 data-i18n="mpStatsTopSites">_</h3><ol id="mpTopSites"></ol></section>
-            <section class="mpRank"><h3 data-i18n="mpStatsByType">_</h3><ol id="mpTopTypes"></ol></section>
+        <div class="mpStatsFooter">
+            <p class="mpStatsMuted"><span data-i18n="mpStatsPrivacy">_</span> <span data-i18n="mpStatsNote">_</span></p>
+            <p class="mpStatsActions">
+                <button type="button" id="mpStatsClear" class="mpBtn"><svg class="mpIcon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg><span data-i18n="mpStatsClear">_</span></button>
+                <button type="button" id="mpStatsDisable" class="mpBtn"><svg class="mpIcon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v10"/><path d="M18.4 6.6a9 9 0 1 1-12.77.04"/></svg><span data-i18n="mpStatsDisable">_</span></button>
+            </p>
         </div>
-        <p class="mpStatsMuted"><span data-i18n="mpStatsPrivacy">_</span> <span data-i18n="mpStatsNote">_</span></p>
-        <p class="mpStatsActions">
-            <button type="button" id="mpStatsClear" data-i18n="mpStatsClear">_</button>
-            <button type="button" id="mpStatsDisable" data-i18n="mpStatsDisable">_</button>
-        </p>
     </div>
 </section>
 
@@ -246,6 +308,7 @@
             <div class="li"><span><a href="https://fontawesome.com/" target="_blank">FontAwesome font family</a> by <a href="https://github.com/davegandy">Dave Gandy</a></span></div>
             <div class="li"><span><a href="https://github.com/mathiasbynens/punycode.js" target="_blank">Punycode.js</a> by <a href="https://github.com/mathiasbynens">Mathias Bynens</a></span></div>
             <div class="li"><span><a href="https://flagpedia.net/" target="_blank">Flags of the World</a> by <a href="https://www.davidkrmela.com/">David Krmela</a></span></div>
+            <div class="li"><span><a href="https://lucide.dev/" target="_blank">Lucide icons</a> (ISC) by <a href="https://github.com/lucide-icons/lucide">Lucide contributors</a></span></div>
             <div class="li"><span><a href="https://codemirror.net/" target="_blank">CodeMirror 6</a> by <a href="https://github.com/marijnh">Marijn Haverbeke</a></span></div>
             <div class="li"><span><a href="https://github.com/AdguardTeam/Scriptlets/blob/master/src/redirects/google-ima3-dai.ts" target="_blank">google-ima3-dai</a> by <a href="https://github.com/AdamWr">Adam Wróblewski</a></span></div>
         </div>

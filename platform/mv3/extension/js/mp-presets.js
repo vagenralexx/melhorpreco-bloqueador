@@ -110,13 +110,37 @@ function presetFromEnabled(enabledRulesets, groupOf) {
     return '';
 }
 
+export function presetLabel(name) {
+    return i18n$(name !== '' ? PRESET_NAMES[name] : 'mpPresetCustom');
+}
+
+// Used by the header badge and the statistics dashboard
+export async function getProtectionSummary() {
+    const [ enabledRulesets, rulesetDetails ] = await Promise.all([
+        sendMessage({ what: 'getEnabledRulesets' }),
+        sendMessage({ what: 'getRulesetDetails' }),
+    ]);
+    const groupOf = new Map(rulesetDetails.map(a => [ a.id, a.group ]));
+    const enabled = new Set(enabledRulesets);
+    let ruleCount = 0;
+    for ( const details of rulesetDetails ) {
+        if ( enabled.has(details.id) === false ) { continue; }
+        ruleCount += details.rules?.total || 0;
+    }
+    return {
+        preset: presetFromEnabled(enabledRulesets, groupOf),
+        listCount: enabledRulesets.length,
+        ruleCount,
+    };
+}
+
 function renderCurrent(name) {
     for ( const button of qsa$('#mpPresets [data-preset]') ) {
         dom.attr(button, 'aria-pressed', `${button.dataset.preset === name}`);
     }
-    dom.text('#mpPresetCurrent',
-        i18n$(name !== '' ? PRESET_NAMES[name] : 'mpPresetCustom')
-    );
+    dom.text('#mpPresetCurrent', presetLabel(name));
+    dom.text('#mpModeBadgeName', presetLabel(name));
+    dom.attr('#mpModeBadge', 'data-preset', name || 'custom');
 }
 
 async function refresh() {

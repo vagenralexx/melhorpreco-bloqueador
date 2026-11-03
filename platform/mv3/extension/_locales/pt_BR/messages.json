@@ -524,7 +524,7 @@
     "description": "Melhor Preço Bloqueador"
   },
   "mpStatsTileDomains": {
-    "message": "Domínios bloqueados diferentes",
+    "message": "Domínios bloqueados",
     "description": "Melhor Preço Bloqueador"
   },
   "mpStatsTileSites": {
@@ -661,6 +661,86 @@
   },
   "mpPresetCurrent": {
     "message": "Modo atual:",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsDashTitle": {
+    "message": "Painel de proteção",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsProtection": {
+    "message": "Proteção ativa",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsModeLabel": {
+    "message": "Modo",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsListsActive": {
+    "message": "listas ativas",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsRules": {
+    "message": "regras",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsDonutUnit": {
+    "message": "bloqueios",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsHeatTitle": {
+    "message": "Atividade por dia da semana e hora (últimos 30 dias)",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsSummary": {
+    "message": "Resumo do período",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsPeakHour": {
+    "message": "Horário de pico",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsBusiestDay": {
+    "message": "Dia com mais bloqueios",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsDailyAvg": {
+    "message": "Média por dia",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsTopTarget": {
+    "message": "Domínio mais bloqueado",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsVsYesterday": {
+    "message": "vs. ontem",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsVsPrevious": {
+    "message": "vs. período anterior",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsNoChange": {
+    "message": "sem variação",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsNew": {
+    "message": "novo",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsOthers": {
+    "message": "Outros",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsPeakLabel": {
+    "message": "Pico",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsAvgLabel": {
+    "message": "média",
+    "description": "Melhor Preço Bloqueador"
+  },
+  "mpStatsHeatPeak": {
+    "message": "Maior atividade",
     "description": "Melhor Preço Bloqueador"
   }
 }

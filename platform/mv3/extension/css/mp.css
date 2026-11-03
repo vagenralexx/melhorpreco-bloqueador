@@ -1,18 +1,153 @@
-/* Melhor Preço Bloqueador: modos de proteção e estatísticas */
+/* Melhor Preço Bloqueador: visual do painel, modos de proteção e estatísticas */
+
+/* ---------- Tokens ---------- */
 
 :root {
-    --mp-bar: rgb(var(--primary-40));
-    --mp-bar-hover: rgb(var(--primary-30));
-    --mp-gap: var(--default-gap-small, 12px);
+    --mp-page: #f3f6fb;
+    --mp-card: #ffffff;
+    --mp-card-2: #f5f8fc;
+    --mp-border: #d9e2ee;
+    --mp-ink: #0f172a;
+    --mp-ink-2: #475569;
+    --mp-ink-3: #64748b;
+    --mp-accent: #2a78d6;
+    --mp-accent-strong: #1c5cab;
+    --mp-accent-soft: #e3eefc;
+    --mp-amber: #c98500;
+    --mp-glow: 0 1px 2px rgb(15 23 42 / 0.06), 0 4px 16px rgb(15 23 42 / 0.05);
+    --mp-glow-strong: 0 1px 2px rgb(15 23 42 / 0.08), 0 8px 28px rgb(42 120 214 / 0.14);
+    --mp-radius: 14px;
+    --mp-gap: 16px;
+    --mp-bar: #2a78d6;
+    --mp-bar-hover: #1c5cab;
+    --mp-slot1: #2a78d6;
+    --mp-slot2: #eb6834;
+    --mp-slot3: #1baf7a;
+    --mp-slot4: #eda100;
+    --mp-slot5: #e87ba4;
+    --mp-slot-others: #94a3b8;
+    --mp-heat0: #edf1f7;
+    --mp-heat1: #cde2fb;
+    --mp-heat2: #9ec5f4;
+    --mp-heat3: #6da7ec;
+    --mp-heat4: #3987e5;
+    --mp-heat5: #256abf;
+    --mp-heat6: #184f95;
     }
 :root.dark {
-    --mp-bar: rgb(var(--primary-60));
-    --mp-bar-hover: rgb(var(--primary-70));
+    /* Futuristic navy instead of the neutral upstream grays */
+    --surface-1: #0b1220;
+    --surface-2: #131d33;
+    --surface-3: #1c2945;
+    --mp-page: #0b1220;
+    --mp-card: #111a2e;
+    --mp-card-2: #16213a;
+    --mp-border: #22324f;
+    --mp-ink: #e6edf7;
+    --mp-ink-2: #a9b6cc;
+    --mp-ink-3: #8592a8;
+    --mp-accent: #3987e5;
+    --mp-accent-strong: #86b6ef;
+    --mp-accent-soft: #15284a;
+    --mp-amber: #f5b820;
+    --mp-glow: 0 0 0 1px rgb(96 165 250 / 0.06), 0 8px 24px rgb(0 0 0 / 0.35);
+    --mp-glow-strong: 0 0 0 1px rgb(96 165 250 / 0.18), 0 10px 32px rgb(37 99 235 / 0.28);
+    --mp-bar: #3987e5;
+    --mp-bar-hover: #86b6ef;
+    --mp-slot1: #3987e5;
+    --mp-slot2: #d95926;
+    --mp-slot3: #199e70;
+    --mp-slot4: #c98500;
+    --mp-slot5: #d55181;
+    --mp-slot-others: #5b6b86;
+    --mp-heat0: #16213a;
+    --mp-heat1: #104281;
+    --mp-heat2: #184f95;
+    --mp-heat3: #1c5cab;
+    --mp-heat4: #2a78d6;
+    --mp-heat5: #5598e7;
+    --mp-heat6: #86b6ef;
+    }
+
+:root.dark body {
+    background:
+        radial-gradient(1100px 520px at 50% -260px, rgb(37 99 235 / 0.22), transparent 70%),
+        var(--mp-page);
+    background-attachment: fixed;
+    }
+
+.mpIcon {
+    fill: none;
+    flex-shrink: 0;
+    height: 18px;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+    width: 18px;
     }
 
 /* Pane wiring (mirrors dashboard.css) */
 body[data-pane="stats"]:not(.busy) > section[data-pane="stats"] {
     display: block;
+    }
+
+/* ---------- Page width: wider shell, readable panes ---------- */
+
+body > header,
+body > section[data-pane="stats"] {
+    box-sizing: border-box;
+    padding-left: 16px;
+    padding-right: 16px;
+    width: min(1152px, 100%);
+    }
+#mpStatsOff[hidden],
+#mpStatsOn[hidden] {
+    display: none;
+    }
+body > section:not([data-pane="stats"]) {
+    width: min(760px, 100%);
+    }
+header > [data-pane-related] {
+    margin: 0 auto;
+    width: min(760px, 100%);
+    }
+:root.dark header {
+    background-color: rgb(11 18 32 / 0.92);
+    backdrop-filter: blur(8px);
+    }
+
+/* ---------- Header: brand, tabs, mode badge ---------- */
+
+nav#dashboard-nav {
+    align-items: center;
+    }
+nav .logo {
+    align-items: center;
+    display: inline-flex;
+    gap: 8px;
+    padding: 0 12px 0 4px;
+    width: auto;
+    }
+nav .logo > img {
+    height: 28px;
+    width: 28px;
+    }
+.mpNavBrand {
+    color: var(--mp-ink);
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    }
+nav > .tabButton {
+    border-radius: 8px 8px 0 0;
+    padding-left: 0.9em;
+    padding-right: 0.9em;
+    transition: color 150ms ease, background-color 150ms ease, border-color 150ms ease;
+    }
+nav > .tabButton:focus-visible {
+    outline: 2px solid var(--mp-accent);
+    outline-offset: -2px;
     }
 body[data-pane="stats"] #dashboard-nav .tabButton[data-pane="stats"] {
     background-color: var(--dashboard-tab-active-surface);
@@ -20,159 +155,408 @@ body[data-pane="stats"] #dashboard-nav .tabButton[data-pane="stats"] {
     color: var(--dashboard-tab-active-ink);
     fill: var(--dashboard-tab-active-ink);
     }
-
-/* One more tab than upstream: tighten tabs so they fit on one line */
-nav > .tabButton {
-    padding-left: 1em;
-    padding-right: 1em;
+.mpModeBadge {
+    align-items: center;
+    background-color: var(--mp-accent-soft);
+    border: 1px solid var(--mp-border);
+    border-radius: 999px;
+    color: var(--mp-ink);
+    display: inline-flex;
+    font-size: 90%;
+    gap: 6px;
+    margin: 6px 4px 6px auto;
+    padding: 4px 12px 4px 10px;
+    white-space: nowrap;
+    }
+.mpModeBadge .mpIcon {
+    color: var(--mp-accent);
+    height: 16px;
+    width: 16px;
+    }
+.mpModeBadge[data-preset=""] {
+    visibility: hidden;
     }
 
-/* Protection modes */
+/* ---------- Protection modes ---------- */
+
 #mpPresets {
     border: 0;
-    margin: 0 0 var(--mp-gap);
+    margin: 12px 0 var(--mp-gap);
     min-width: 0;
     padding: 0;
     }
 #mpPresets legend {
-    font-weight: 600;
-    margin-bottom: 0.5em;
+    color: var(--mp-ink);
+    font-weight: 700;
+    margin-bottom: 8px;
     padding: 0;
     }
 .mpPresetButtons {
     display: grid;
-    gap: 8px;
+    gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     }
 .mpPresetButtons button {
-    align-items: flex-start;
-    background-color: var(--surface-1);
-    border: 1px solid var(--border-2);
-    border-radius: 6px;
-    color: var(--ink-1);
+    background-color: var(--mp-card);
+    border: 1px solid var(--mp-border);
+    border-radius: 12px;
+    box-shadow: var(--mp-glow);
+    color: var(--mp-ink);
+    align-content: start;
+    align-items: center;
+    column-gap: 10px;
     cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: auto 1fr;
     min-height: 44px;
-    padding: 10px 12px;
+    padding: 12px;
+    row-gap: 4px;
     text-align: start;
+    transition: border-color 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
     white-space: normal;
     }
+/* dom.on() delegation only fires when the event target is the button itself */
+.mpPresetButtons button > * {
+    pointer-events: none;
+    }
 .mpPresetButtons button:hover {
-    border-color: var(--mp-bar);
+    border-color: var(--mp-accent);
     }
 .mpPresetButtons button:focus-visible {
-    outline: 2px solid var(--mp-bar);
+    outline: 2px solid var(--mp-accent);
     outline-offset: 2px;
     }
 .mpPresetButtons button[aria-pressed="true"] {
-    background-color: rgb(var(--dashboard-highlight-surface-rgb));
-    border: 2px solid var(--mp-bar);
-    padding: 9px 11px;
+    background-color: var(--mp-accent-soft);
+    border-color: var(--mp-accent);
+    box-shadow: var(--mp-glow-strong);
     }
 .mpPresetButtons button[disabled] {
     cursor: progress;
     opacity: 0.6;
     }
-/* dom.on() delegation only fires when the event target is the button itself */
-.mpPresetButtons button > span {
-    pointer-events: none;
+.mpPresetIcon {
+    background-color: var(--mp-accent-soft);
+    border-radius: 8px;
+    box-sizing: content-box;
+    color: var(--mp-accent);
+    padding: 7px;
+    }
+.mpPresetButtons button[aria-pressed="true"] .mpPresetIcon {
+    background-color: var(--mp-accent);
+    color: #ffffff;
     }
 .mpPresetName {
-    font-weight: 600;
+    align-self: center;
+    font-weight: 700;
     }
 .mpPresetButtons button[aria-pressed="true"] .mpPresetName::after {
     content: ' \2713';
     }
 .mpPresetDesc {
-    color: var(--ink-2);
+    color: var(--mp-ink-2);
+    grid-column: 1 / -1;
     font-size: 90%;
-    line-height: 1.35;
+    line-height: 1.4;
     }
 .mpPresetHelp {
-    color: var(--ink-2);
+    color: var(--mp-ink-2);
     font-size: 90%;
-    margin: 0.6em 0 0;
+    margin: 10px 0 0;
     }
 
-/* Statistics */
+/* ---------- Statistics dashboard ---------- */
+
 section[data-pane="stats"] {
-    padding-bottom: 2em;
+    color: var(--mp-ink);
+    padding: 8px 4px 32px;
+    }
+section[data-pane="stats"] h2,
+section[data-pane="stats"] h3 {
+    margin: 0;
+    }
+.mpCard {
+    background-color: var(--mp-card);
+    border: 1px solid var(--mp-border);
+    border-radius: var(--mp-radius);
+    box-shadow: var(--mp-glow);
+    box-sizing: border-box;
+    min-width: 0;
+    padding: 16px;
+    }
+.mpCard h3 {
+    font-size: 100%;
+    font-weight: 700;
+    margin-bottom: 12px;
+    }
+.mpStatsOffCard {
+    align-items: flex-start;
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+    }
+.mpStatsOffCard h3 {
+    font-size: 120%;
+    margin-bottom: 8px;
     }
 .mpStatsWarn {
     font-weight: 600;
     }
 .mpStatsMuted {
-    color: var(--ink-2);
+    color: var(--mp-ink-2);
     font-size: 90%;
     }
-.mpStatsRange {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: var(--mp-gap) 0;
-    }
-.mpStatsRange label {
+
+.mpBtn {
     align-items: center;
-    border: 1px solid var(--border-2);
-    border-radius: 6px;
+    background-color: var(--mp-card-2);
+    border: 1px solid var(--mp-border);
+    border-radius: 10px;
+    color: var(--mp-ink);
     cursor: pointer;
     display: inline-flex;
-    gap: 6px;
-    min-height: 32px;
-    padding: 0 12px;
-    }
-.mpStatsRange label:has(input:checked) {
-    background-color: rgb(var(--dashboard-highlight-surface-rgb));
-    border-color: var(--mp-bar);
     font-weight: 600;
+    gap: 8px;
+    min-height: 40px;
+    padding: 0 14px;
+    transition: border-color 150ms ease, background-color 150ms ease;
     }
-.mpStatsRange label:has(input:focus-visible) {
-    outline: 2px solid var(--mp-bar);
+.mpBtn > * {
+    pointer-events: none;
+    }
+.mpBtn:hover {
+    border-color: var(--mp-accent);
+    }
+.mpBtn:focus-visible {
+    outline: 2px solid var(--mp-accent);
     outline-offset: 2px;
     }
-.mpStatsTiles {
-    display: grid;
-    gap: 8px;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    margin-bottom: var(--mp-gap);
+.mpBtnPrimary {
+    background-color: var(--mp-accent-strong);
+    border-color: var(--mp-accent-strong);
+    color: #ffffff;
     }
-.mpTile {
-    background-color: var(--surface-1);
-    border: 1px solid var(--border-1);
-    border-radius: 6px;
+:root.dark .mpBtnPrimary {
+    background-color: #2a78d6;
+    border-color: #2a78d6;
+    }
+
+.mpToolbar {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-between;
+    margin: 16px 0;
+    }
+.mpToolbar h2 {
+    font-size: 150%;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    }
+.mpSegmented {
+    background-color: var(--mp-card);
+    border: 1px solid var(--mp-border);
+    border-radius: 12px;
+    display: inline-flex;
+    gap: 4px;
+    padding: 4px;
+    }
+.mpSegmented label {
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    min-height: 32px;
+    position: relative;
+    }
+.mpSegmented input {
+    opacity: 0;
+    position: absolute;
+    }
+.mpSegmented span {
+    align-items: center;
+    color: var(--mp-ink-2);
+    display: inline-flex;
+    font-weight: 600;
+    padding: 0 14px;
+    }
+.mpSegmented label:has(input:checked) {
+    background-color: var(--mp-accent);
+    box-shadow: var(--mp-glow-strong);
+    }
+.mpSegmented label:has(input:checked) span {
+    color: #ffffff;
+    }
+/* white text needs >= 4.5:1: #3987e5 gives 3.8:1, #2a78d6 gives 4.6:1 */
+:root.dark .mpSegmented label:has(input:checked) {
+    background-color: #2a78d6;
+    }
+.mpSegmented label:has(input:focus-visible) {
+    outline: 2px solid var(--mp-accent);
+    outline-offset: 2px;
+    }
+
+.mpGrid {
+    display: grid;
+    gap: var(--mp-gap);
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+.mpGrid > * {
+    grid-column: span 12;
+    margin: 0;
+    }
+.mpHero { grid-column: span 4; }
+.mpKpi { grid-column: span 2; }
+.mpSpan8 { grid-column: span 8; }
+.mpSpan6 { grid-column: span 6; }
+.mpSpan4 { grid-column: span 4; }
+
+@media (max-width: 1060px) {
+    .mpHero { grid-column: span 12; }
+    .mpKpi { grid-column: span 3; }
+}
+@media (max-width: 860px) {
+    .mpKpi { grid-column: span 6; }
+    .mpSpan8, .mpSpan6, .mpSpan4 { grid-column: span 12; }
+}
+@media (max-width: 480px) {
+    .mpKpi { grid-column: span 12; }
+}
+
+/* Hero */
+.mpHero {
+    align-items: center;
+    background:
+        radial-gradient(260px 140px at 0% 0%, rgb(57 135 229 / 0.18), transparent 70%),
+        var(--mp-card);
+    box-shadow: var(--mp-glow-strong);
+    display: flex;
+    gap: 14px;
+    }
+.mpHero img {
+    filter: drop-shadow(0 4px 12px rgb(37 99 235 / 0.35));
+    flex-shrink: 0;
+    }
+.mpHeroBody {
     display: flex;
     flex-direction: column;
     gap: 4px;
-    padding: 12px;
+    min-width: 0;
     }
-.mpTileValue {
-    font-size: 1.8em;
-    font-variant-numeric: tabular-nums;
-    font-weight: 600;
-    line-height: 1.1;
+.mpEyebrow {
+    color: var(--mp-accent);
+    font-size: 80%;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     }
-.mpTileLabel {
-    color: var(--ink-2);
+.mpHeroMode {
+    font-size: 130%;
+    font-weight: 700;
+    }
+.mpHeroMeta {
+    color: var(--mp-ink-2);
     font-size: 90%;
     }
+
+/* KPI cards */
+.mpKpi {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    }
+.mpKpiHead {
+    align-items: flex-start;
+    color: var(--mp-ink-2);
+    display: flex;
+    font-size: 85%;
+    gap: 6px;
+    line-height: 1.3;
+    min-height: 2.6em;
+    }
+.mpKpiHead .mpIcon {
+    color: var(--mp-accent);
+    height: 16px;
+    width: 16px;
+    }
+.mpKpiValue {
+    font-size: 200%;
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    }
+:root.dark .mpKpiValue {
+    text-shadow: 0 0 18px rgb(96 165 250 / 0.35);
+    }
+.mpKpiDelta {
+    color: var(--mp-ink-2);
+    font-size: 80%;
+    font-variant-numeric: tabular-nums;
+    }
+.mpSpark {
+    display: block;
+    height: 28px;
+    margin-top: auto;
+    overflow: visible;
+    width: 100%;
+    }
+.mpSparkLine {
+    fill: none;
+    stroke: var(--mp-accent);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+    vector-effect: non-scaling-stroke;
+    }
+.mpSparkArea {
+    fill: var(--mp-accent);
+    opacity: 0.12;
+    }
+.mpSparkDot {
+    fill: var(--mp-accent);
+    stroke: var(--mp-card);
+    stroke-width: 2;
+    vector-effect: non-scaling-stroke;
+    }
+
+/* Bar chart */
 .mpChart {
-    margin: 0 0 var(--mp-gap);
+    display: flex;
+    flex-direction: column;
     }
 .mpChart figcaption {
+    align-items: baseline;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 700;
+    gap: 8px;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    }
+.mpChartPeak {
+    color: var(--mp-ink-2);
+    font-size: 85%;
     font-weight: 600;
-    margin-bottom: 8px;
+    }
+.mpChartPeak:not(:empty)::before {
+    background-color: var(--mp-amber);
+    border-radius: 3px;
+    content: '';
+    display: inline-block;
+    height: 10px;
+    margin-right: 6px;
+    width: 10px;
     }
 .mpChartPlot {
     display: flex;
-    gap: 6px;
-    height: 180px;
+    flex: 1;
+    gap: 8px;
+    min-height: 200px;
     position: relative;
     }
 .mpChartAxis {
-    color: var(--ink-3);
+    color: var(--mp-ink-3);
     display: flex;
     flex-direction: column;
     font-size: 80%;
@@ -183,14 +567,16 @@ section[data-pane="stats"] {
     }
 .mpChartBars {
     align-items: flex-end;
-    border-bottom: 1px solid var(--border-1);
+    border-bottom: 1px solid var(--mp-border);
     display: flex;
     flex: 1;
     gap: 2px;
     min-width: 0;
+    position: relative;
     }
 .mpBar {
     align-items: flex-end;
+    border-radius: 4px;
     display: flex;
     flex: 1;
     height: 100%;
@@ -199,52 +585,78 @@ section[data-pane="stats"] {
     outline: none;
     }
 .mpBar > span {
-    background-color: var(--mp-bar);
+    background: linear-gradient(180deg, var(--mp-bar-hover), var(--mp-bar) 40%);
     border-radius: 4px 4px 0 0;
     display: block;
+    height: var(--h, 0%);
     max-width: 24px;
     pointer-events: none;
+    transition: height 300ms ease-out;
     width: 100%;
     }
-.mpBar:hover > span,
-.mpBar:focus-visible > span {
-    background-color: var(--mp-bar-hover);
+.mpBarPeak > span {
+    background: var(--mp-amber);
+    }
+.mpBar:hover,
+.mpBar:focus-visible {
+    background-color: var(--mp-accent-soft);
     }
 .mpBar:focus-visible {
-    box-shadow: inset 0 0 0 2px var(--mp-bar);
+    box-shadow: inset 0 0 0 2px var(--mp-accent);
+    }
+.mpAvgLine {
+    border-top: 1px solid var(--mp-ink-3);
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    }
+.mpAvgLine span {
+    background-color: var(--mp-card);
+    color: var(--mp-ink-2);
+    font-size: 75%;
+    padding: 0 4px;
+    position: absolute;
+    right: 0;
+    top: -0.75em;
     }
 .mpChartXAxis {
-    color: var(--ink-3);
+    color: var(--mp-ink-3);
     display: flex;
     font-size: 80%;
     justify-content: space-between;
-    margin-left: calc(3ch + 6px);
-    margin-top: 4px;
+    margin-left: calc(3ch + 8px);
+    margin-top: 6px;
     }
 .mpTooltip {
-    background-color: var(--surface-0);
-    border: 1px solid var(--border-2);
-    border-radius: 4px;
-    box-shadow: 0 2px 6px rgb(0 0 0 / 0.2);
-    color: var(--ink-1);
-    font-size: 90%;
+    background-color: var(--mp-ink);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.25);
+    color: var(--mp-card);
+    font-size: 85%;
+    font-weight: 600;
     padding: 4px 8px;
     pointer-events: none;
     position: absolute;
-    top: 0;
+    top: -6px;
     white-space: nowrap;
     z-index: 10;
     }
 .mpChartTable {
-    margin-top: 8px;
+    margin-top: 10px;
+    }
+.mpChartTable summary {
+    color: var(--mp-ink-2);
+    cursor: pointer;
+    font-size: 90%;
     }
 .mpChartTable table {
     border-collapse: collapse;
     margin-top: 6px;
     }
-.mpChartTable th,
-.mpChartTable td {
-    border-bottom: 1px solid var(--border-1);
+.mpChartTable td,
+.mpChartTable th {
+    border-bottom: 1px solid var(--mp-border);
     padding: 2px 16px 2px 0;
     text-align: start;
     }
@@ -252,47 +664,192 @@ section[data-pane="stats"] {
     font-variant-numeric: tabular-nums;
     text-align: end;
     }
-.mpStatsRanks {
+
+/* Donut */
+.mpDonutWrap {
+    margin: 0 auto 12px;
+    max-width: 170px;
+    position: relative;
+    }
+.mpDonut {
+    display: block;
+    transform: rotate(-90deg);
+    width: 100%;
+    }
+.mpDonutTrack {
+    fill: none;
+    stroke: var(--mp-card-2);
+    stroke-width: 14;
+    }
+.mpDonutSlice {
+    fill: none;
+    stroke-width: 14;
+    transition: stroke-dasharray 300ms ease-out;
+    }
+.mpDonutCenter {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    inset: 0;
+    justify-content: center;
+    position: absolute;
+    }
+.mpDonutCenter strong {
+    font-size: 160%;
+    font-variant-numeric: tabular-nums;
+    }
+.mpDonutCenter span {
+    color: var(--mp-ink-2);
+    font-size: 80%;
+    }
+.mpSlot1 { stroke: var(--mp-slot1); background-color: var(--mp-slot1); }
+.mpSlot2 { stroke: var(--mp-slot2); background-color: var(--mp-slot2); }
+.mpSlot3 { stroke: var(--mp-slot3); background-color: var(--mp-slot3); }
+.mpSlot4 { stroke: var(--mp-slot4); background-color: var(--mp-slot4); }
+.mpSlot5 { stroke: var(--mp-slot5); background-color: var(--mp-slot5); }
+.mpSlotothers { stroke: var(--mp-slot-others); background-color: var(--mp-slot-others); }
+circle.mpDonutSlice { background-color: transparent; }
+.mpLegend {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+.mpLegend li {
+    align-items: center;
     display: grid;
-    gap: var(--mp-gap);
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    font-size: 90%;
+    gap: 8px;
+    grid-template-columns: 10px minmax(0, 1fr) auto;
     }
-.mpRank h3 {
-    font-size: 100%;
-    margin: 0 0 8px;
+.mpSwatch {
+    border-radius: 3px;
+    height: 10px;
+    width: 10px;
     }
+.mpLegendValue {
+    color: var(--mp-ink-2);
+    font-variant-numeric: tabular-nums;
+    }
+
+/* Heatmap */
+.mpHeat {
+    display: grid;
+    gap: 3px;
+    grid-template-columns: 3.2em repeat(24, minmax(0, 1fr));
+    }
+.mpHeatHour,
+.mpHeatDay {
+    color: var(--mp-ink-3);
+    font-size: 75%;
+    white-space: nowrap;
+    }
+.mpHeatDay {
+    align-self: center;
+    text-transform: capitalize;
+    }
+.mpHeatCell {
+    aspect-ratio: 1;
+    background-color: var(--mp-heat0);
+    border-radius: 3px;
+    }
+.mpHeatCell[data-level="1"] { background-color: var(--mp-heat1); }
+.mpHeatCell[data-level="2"] { background-color: var(--mp-heat2); }
+.mpHeatCell[data-level="3"] { background-color: var(--mp-heat3); }
+.mpHeatCell[data-level="4"] { background-color: var(--mp-heat4); }
+.mpHeatCell[data-level="5"] { background-color: var(--mp-heat5); }
+.mpHeatCell[data-level="6"] { background-color: var(--mp-heat6); }
+.mpHeatLegend {
+    align-items: center;
+    color: var(--mp-ink-3);
+    display: flex;
+    font-size: 80%;
+    gap: 8px;
+    justify-content: flex-end;
+    margin-top: 10px;
+    }
+.mpHeatRamp {
+    background: linear-gradient(90deg, var(--mp-heat0), var(--mp-heat1), var(--mp-heat3), var(--mp-heat5), var(--mp-heat6));
+    border-radius: 3px;
+    height: 8px;
+    width: 120px;
+    }
+
+/* Summary */
+.mpSummary dl {
+    display: grid;
+    gap: 12px;
+    margin: 0;
+    }
+.mpSummary dt {
+    color: var(--mp-ink-2);
+    font-size: 85%;
+    }
+.mpSummary dd {
+    font-size: 110%;
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    margin: 2px 0 0;
+    overflow-wrap: anywhere;
+    }
+
+/* Rankings */
 .mpRank ol {
     list-style: none;
     margin: 0;
     padding: 0;
     }
 .mpRank li {
+    align-items: center;
     display: grid;
-    gap: 2px 8px;
-    grid-template-columns: minmax(0, 1fr) auto;
-    margin-bottom: 8px;
+    gap: 4px 10px;
+    grid-template-columns: 1.6em minmax(0, 1fr) auto;
+    margin-bottom: 10px;
+    }
+.mpRankPos {
+    color: var(--mp-ink-3);
+    font-size: 85%;
+    font-variant-numeric: tabular-nums;
+    text-align: end;
     }
 .mpRankName {
     overflow-wrap: anywhere;
     }
 .mpRankCount {
-    color: var(--ink-2);
+    color: var(--mp-ink-2);
     font-variant-numeric: tabular-nums;
+    font-weight: 600;
     }
 .mpRankBar {
-    background-color: var(--surface-2);
-    border-radius: 2px;
-    grid-column: 1 / -1;
+    background-color: var(--mp-card-2);
+    border-radius: 999px;
+    grid-column: 2 / -1;
     height: 4px;
     }
 .mpRankBar > span {
-    background-color: var(--mp-bar);
-    border-radius: 2px;
+    background: linear-gradient(90deg, var(--mp-bar), var(--mp-bar-hover));
+    border-radius: 999px;
     display: block;
     height: 100%;
+    }
+
+.mpStatsFooter {
+    margin-top: var(--mp-gap);
     }
 .mpStatsActions {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     }
+
+@media (prefers-reduced-motion: reduce) {
+    .mpBar > span,
+    .mpDonutSlice,
+    nav > .tabButton,
+    .mpPresetButtons button,
+    .mpBtn {
+        transition: none;
+    }
+}

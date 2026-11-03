@@ -59,3 +59,9 @@ Atenção: HaGeZi, OISD e StevenBlack **agregam** outras listas. Os mantenedores
 | edgard/paywall-filters-br | Contorna paywall de jornais: risco jurídico e de política da Chrome Web Store. |
 | eyeo ABP Anti-CV "portuguese.txt" (GPLv3) | Usa a sintaxe de snippets do Adblock Plus (`#$#`), que a uBOL não interpreta; quase nada viraria regra. |
 | EasyList Brasil (CC BY-SA 4.0) | Última atualização em 04/09/2021. |
+
+## Outros componentes de terceiros acrescentados
+
+| Componente | Licença | Onde |
+|---|---|---|
+| Ícones Lucide (feather, shield-check, zap, users, ban, globe, monitor, octagon-alert, trash-2, power) | ISC (https://github.com/lucide-icons/lucide/blob/main/LICENSE) | SVG embutido em `dashboard.html`; crédito na aba Sobre |

@@ -69,8 +69,17 @@ Cada modo foi aplicado **pelo botão do painel**, e depois rodou a navegação e
 - Páginas barradas com aviso são contadas à parte (o teste do modo Família gera essas entradas).
 - Telas conferidas: claro e escuro a 1024x768 (gráfico com dica ao passar o mouse e ao focar pelo teclado, tabela opcional, rankings) e 600 px de largura (medido: nenhum elemento passa da área visível).
 
+## 8. Ícone, redesenho do painel e WhatsApp Web (03/11/2026, tarde)
+
+- **Ícone:** convertido de `D:\Smart Print\Downloads\596adcbd-….png` (1254 px). Os pontinhos soltos na borda foram limpos com máscara circular. Gerados 16/32/64/128/512 e as versões pausadas `_off`, conferidos em fundo claro e escuro; o símbolo de proibido continua legível em 16 px.
+- **Painel:** redesenhado com as diretrizes do MCP (`get_design_guidance`), a skill ui-ux-pro-max e as regras de visualização de dados. Paleta da rosca validada pelo script (no escuro passa em tudo; no claro, 3 cores com contraste abaixo de 3:1 são compensadas pela legenda com números e %). Barras: azul primário, pico em âmbar com rótulo escrito. Mapa de calor: um só tom de azul. Branco sobre o azul do seletor de período: 4,6:1.
+- Conferido com 30 dias de dados simulados: 1280, 1024 e 600 px, claro e escuro. Nenhum elemento passa da área visível e não há erro no console. Capturas em `verificacao/redesenho/`.
+- Defeitos achados e corrigidos na conferência: a seção sumia (regra de exibição perdida no CSS novo); o nome da marca ficava sobreposto à primeira aba; o cartão "Ativar" aparecia com a permissão já dada (`display:flex` anulava `hidden`); os títulos dos cartões herdavam o estilo fixo do `<header>` da uBOL; "Modo : Leve" com espaço; conteúdo encostado na borda a 1024 px; descrições desalinhadas nos cartões de modo; rótulo de 3 linhas.
+- **Botão "Ativar estatísticas" no Chrome normal:** confirmado pelo dono (captura com 135 bloqueios).
+- **WhatsApp Web no modo Máximo:** na tela de login, Leve e Máximo bloqueiam a mesma única requisição, `web.whatsapp.com/ajax/bz` (telemetria; regra `/ajax/bz?_` da EasyPrivacy). O QR code aparece nos dois. Os 65 bloqueios da sessão logada do dono devem ser essa telemetria repetida, mais `dit.whatsapp.net` e `crashlogs.whatsapp.net`. A sessão logada não foi aberta aqui (exige login): se algo do WhatsApp falhar, a confirmação é manual.
+
 ## Sem prova
-- **Botão "Ativar estatísticas" no Chrome normal:** o pedido de permissão precisa ser aceito à mão. O código pede `webRequest` com `chrome.permissions.request`; testado só com a permissão já concedida.
+- ~~Botão "Ativar estatísticas" no Chrome normal~~: confirmado pelo dono (seção 8).
 
 - **Popup aberto pelo ícone da barra:** a automação não clica no ícone de extensão. O popup aberto como aba não tem site associado e não representa o uso real. A mudança nele é só o nome (vem das traduções).
 - **Ícone na barra do Chrome** (16/32 px): gerado, mas não visto na barra.
